@@ -153,16 +153,16 @@ section a:hover { text-decoration: underline; }
 }
 
 .project-thumb {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 7px;
   flex-shrink: 0;
   background: var(--tag-bg);
 }
 
 .project-thumb-img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 7px;
   border: 1px solid var(--border);
