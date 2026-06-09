@@ -20,43 +20,11 @@
     </header>
 
     <section>
-      <h2>Context</h2>
       <p>
-        NLP models trained on clean, well-formed transcripts often degrade significantly when deployed on real-world speech output. Production transcription data is noisy in ways that are difficult to anticipate: filled pauses (<em>um</em>, <em>uh</em>), repetitions, mid-word interruptions, phonetic substitutions, overlapping speech artefacts, and domain-specific disfluencies. When training data doesn't reflect this distribution, models become brittle at exactly the point where reliability matters most.
+        NLP models trained on clean transcripts often degrade in production because real speech output is full of noise that doesn't appear in training data — filled pauses, repetitions, phonetic substitutions, and disfluencies. This internship project at LemonAI addressed that gap by building a pipeline to inject realistic linguistic noise into clean transcription data, expanding training distributions without requiring additional labelled examples.
       </p>
       <p>
-        This project, carried out during an Applied NLP internship at LemonAI in London, addressed this gap by building a system to inject realistic linguistic noise into clean transcription data — expanding training distributions without requiring additional labelled data collection.
-      </p>
-    </section>
-
-    <section>
-      <h2>Research</h2>
-      <p>
-        The first phase involved analysing large transcription datasets to systematically categorise the types of noise present in real speech-to-text output. This produced a structured taxonomy of noise patterns covering lexical, phonetic, prosodic, and structural variation — which directly informed the design of both pipeline components.
-      </p>
-    </section>
-
-    <section>
-      <h2>Pipeline Design</h2>
-      <img src="assets/lemonai.png" alt="LemonAI NLP pipeline" class="project-image">
-      <p>The pipeline combines two complementary components:</p>
-      <ul class="detail-list">
-        <li>
-          <strong>Rule-based component</strong> — deterministic noise injection grounded in the pattern taxonomy. Operations include filler word insertion at statistically plausible positions, word-level substitutions using phonetic similarity mappings, repetition injection, and function word deletion. Fast and fully controllable, but limited to patterns that can be explicitly encoded as rules.
-        </li>
-        <li>
-          <strong>LLM component (Claude API)</strong> — generative noise injection that produces naturalistic, contextually coherent linguistic variation. This component handles patterns that are difficult to capture with rules: context-dependent disfluencies, realistic partial repairs, and stylistic variation across speaker types. The model was prompted to simulate specific noise profiles while preserving the semantic content of the original text.
-        </li>
-      </ul>
-      <p>
-        The two components were designed to be complementary: the rule-based system handles high-volume, low-variance noise at speed, while the LLM handles cases where naturalness and coherence matter more than throughput.
-      </p>
-    </section>
-
-    <section>
-      <h2>Outcome</h2>
-      <p>
-        The pipeline produced augmented training data that more closely mirrored the distribution of real production transcription output. Downstream NLP models trained on the augmented data demonstrated improved robustness to the types of noise present in real deployments — the core goal of the internship project.
+        The pipeline combines two components: a rule-based module for deterministic, high-volume noise injection based on a taxonomy of patterns identified through corpus analysis, and an LLM component using the Claude API for generative noise that produces naturalistic, contextually coherent variation — the kind of disfluency that rules alone can't replicate. Downstream NLP models trained on the augmented data showed improved robustness to real-world transcription noise.
       </p>
     </section>
 
