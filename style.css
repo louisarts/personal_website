@@ -157,8 +157,13 @@ section a:hover { text-decoration: underline; }
   background: var(--tag-bg);
 }
 
+.project-thumb-img {
+  width: 224px;
+  height: 224px;
+  object-fit: cover;
+}
+
 .eye-tracking  { background: linear-gradient(135deg, #c9d8f5 0%, #8faee8 100%); }
-.project-thumb-img { object-fit: cover; border-radius: 8px; }
 .emotion       { background: linear-gradient(135deg, #f5d9c9 0%, #e8a88f 100%); }
 .nlp           { background: linear-gradient(135deg, #d0ecd4 0%, #85c98e 100%); }
 
