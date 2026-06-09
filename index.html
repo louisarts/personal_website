@@ -5,30 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Louis Arts</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write something about yourself here.</p>
-  </section>
+  <div class="container">
 
-  <section id="work">
-    <h2>My Work</h2>
-    <p>Showcase projects, writing, or whatever you do.</p>
-  </section>
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <img src="assets/profile.jpg" alt="Louis Arts" class="profile-pic" onerror="this.style.display='none'">
+        <div>
+          <h1>Louis Arts</h1>
+          <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
+          <nav class="links">
+            <a href="assets/cv.pdf" target="_blank">CV</a>
+            <a href="mailto:artslouis@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/louis-arts" target="_blank">LinkedIn</a>
+            <a href="https://github.com/louisarts" target="_blank">GitHub</a>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: you@example.com</p>
-  </section>
+    <!-- About -->
+    <section>
+      <h2>About</h2>
+      <p>
+        I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP — I'm interested in building systems that are both technically rigorous and practically useful.
+      </p>
+      <p>
+        Previously, I interned at <a href="https://lemon-ai.co.uk" target="_blank">LemonAI</a> in London, where I researched linguistic noise patterns in transcription data and built hybrid NLP pipelines using the Claude API. I'm fluent in Dutch, French, and English, and I'm based in London.
+      </p>
+    </section>
+
+    <!-- News -->
+    <section>
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="date">Jan 2025</span>
+          Started an Applied NLP internship at <a href="https://lemon-ai.co.uk" target="_blank">LemonAI</a>, London — researching robustness in transcription-based NLP models.
+        </li>
+        <li>
+          <span class="date">Sep 2025</span>
+          Started the MSc in Data Science and Machine Learning at UCL.
+        </li>
+        <li>
+          <span class="date">Nov 2025</span>
+          Completed personal project: End-to-End Mobile Eye-Tracking System — 1.5M+ training frames, deployed as a real-time mobile prototype. <a href="https://medium.com" target="_blank">Article on Medium →</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+      <ul class="project-list">
+
+        <li class="project">
+          <div class="project-thumb eye-tracking"></div>
+          <div class="project-body">
+            <h3>End-to-End Mobile Eye-Tracking System</h3>
+            <p>Built a scalable data augmentation pipeline generating 1.5M+ frames, trained a custom multi-branch CNN on RunPod GPUs achieving 1.4 cm MAE, and deployed a real-time prototype mobile app.</p>
+            <span class="tags">Python · PyTorch · Computer Vision · Mobile</span><br>
+            <a href="https://github.com/louisarts" target="_blank">[Code]</a>
+            <a href="https://medium.com" target="_blank">[Article]</a>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="project-thumb emotion"></div>
+          <div class="project-body">
+            <h3>Real-Time Facial Emotion Recognition</h3>
+            <p>Real-time emotion recognition using transfer learning on pretrained CNNs, achieving 81% accuracy on 40K+ labelled images. Presented at Le Wagon Demo Day.</p>
+            <span class="tags">Python · PyTorch · Transfer Learning · OpenCV</span><br>
+            <a href="https://github.com/louisarts" target="_blank">[Code]</a>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="project-thumb nlp"></div>
+          <div class="project-body">
+            <h3>LLM Noise Injection Pipeline <span class="work-badge">Internship</span></h3>
+            <p>Developed a hybrid rule-based / LLM-driven noise injection system to simulate realistic linguistic variation in transcription data, improving downstream NLP model robustness.</p>
+            <span class="tags">Python · Claude API · NLP · Data Engineering</span>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li>
+          <div class="edu-row">
+            <strong>MSc Data Science and Machine Learning</strong>
+            <span class="date">2025 – present</span>
+          </div>
+          <span class="institution">University College London</span>
+          <p class="edu-detail">Computer Vision · Statistical Data Science · Applied ML/DL · Reinforcement Learning · Bayesian DL · Statistical NLP</p>
+        </li>
+        <li>
+          <div class="edu-row">
+            <strong>MSc Physics (Astrophysics)</strong>
+            <span class="date">2022 – 2023</span>
+          </div>
+          <span class="institution">Imperial College London</span>
+          <p class="edu-detail">General Relativity · Cosmology · Research Computing</p>
+        </li>
+        <li>
+          <div class="edu-row">
+            <strong>Data Science Bootcamp</strong>
+            <span class="date">Oct – Dec 2022</span>
+          </div>
+          <span class="institution">Le Wagon, Zurich</span>
+        </li>
+        <li>
+          <div class="edu-row">
+            <strong>BSc Maastricht Science Programme (Physics)</strong>
+            <span class="date">2018 – 2022</span>
+          </div>
+          <span class="institution">Maastricht University</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Louis Arts</p>
+    </footer>
+
+  </div>
 </body>
 </html>
