@@ -16,9 +16,9 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,13 +26,13 @@ body {
 .container {
   max-width: 720px;
   margin: 0 auto;
-  padding: 3.5rem 2rem 4rem;
+  padding: 2rem 2rem 3rem;
 }
 
 /* ── Header ── */
 header {
-  margin-bottom: 3rem;
-  padding-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -83,7 +83,7 @@ h1 {
 
 /* ── Sections ── */
 section {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -91,8 +91,8 @@ h2 {
   font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-bottom: 1rem;
-  padding-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -260,7 +260,7 @@ section a:hover { text-decoration: underline; }
 
 /* ── Subpage nav ── */
 .back-nav {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 0.875rem;
 }
 
@@ -316,8 +316,8 @@ section a:hover { text-decoration: underline; }
 
 /* ── Footer ── */
 footer {
-  margin-top: 4rem;
-  padding-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--border);
   font-size: 0.8rem;
   color: var(--muted);
