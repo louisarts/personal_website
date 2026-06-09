@@ -153,16 +153,16 @@ section a:hover { text-decoration: underline; }
 }
 
 .project-thumb {
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   border-radius: 7px;
   flex-shrink: 0;
   background: var(--tag-bg);
 }
 
 .project-thumb-img {
-  width: 88px;
-  height: 88px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 7px;
   border: 1px solid var(--border);
@@ -228,6 +228,36 @@ section a:hover { text-decoration: underline; }
   gap: 1.1rem;
 }
 
+.edu-list li {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.edu-logo-col {
+  width: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  min-height: 36px;
+}
+
+.edu-logo {
+  max-height: 30px;
+  max-width: 56px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.edu-content {
+  flex: 1;
+  min-width: 0;
+}
+
 .edu-row {
   display: flex;
   justify-content: space-between;
@@ -244,18 +274,8 @@ section a:hover { text-decoration: underline; }
 .institution {
   color: var(--muted);
   font-size: 0.825rem;
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-top: 0.15rem;
-}
-
-.edu-logo {
-  height: 18px;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-  opacity: 0.85;
+  display: block;
+  margin-top: 0.1rem;
 }
 
 .edu-detail {
@@ -348,5 +368,7 @@ footer {
   h1 { font-size: 1.5rem; }
   .news-list li { flex-direction: column; gap: 0.1rem; }
   .project { flex-direction: column; }
+  .edu-list li { flex-direction: column; gap: 0.3rem; }
+  .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
 }
