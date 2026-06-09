@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facial Emotion Recognition · Louis Arts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <nav class="back-nav"><a href="index.html">← Louis Arts</a></nav>
+
+    <header>
+      <h1>Real-Time Facial Emotion Recognition</h1>
+      <p class="tagline">Le Wagon Bootcamp Project · Nov – Dec 2022</p>
+      <nav class="links">
+        <a href="https://github.com/louisarts/AIdentify_repo" target="_blank">GitHub</a>
+      </nav>
+      <span class="tags" style="margin-top:0.75rem;display:inline-block;">Python · TensorFlow · Transfer Learning · OpenCV · Flask · FastAPI</span>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        AIdentify is a real-time facial emotion recognition system built in under two weeks as the final project for the Le Wagon Data Science Bootcamp in Zurich. The system detects faces in live webcam video and classifies the expressed emotion across eight categories: neutral, happy, sad, surprised, fearful, angry, disgust, and contempt. It was presented at Le Wagon Demo Day in December 2022.
+      </p>
+      <p>
+        The project was built by a team of three: Louis Arts, Alba Gutierrez Pedemonte, and Patrick Hofbauer. Target applications include measuring audience reactions to digital content, improving eLearning feedback loops, and real-time user experience research.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data</h2>
+      <p>The model was trained on two combined datasets:</p>
+      <ul class="detail-list">
+        <li><strong>FER+</strong> — an extended version of FER-2013 containing approximately 30,000 grayscale 48×48 pixel images, labelled across eight emotion categories by crowdsourced annotators.</li>
+        <li><strong>AffectNet-HQ</strong> — approximately 31,000 candid facial images collected from internet searches using emotion-related keywords, representing emotions in varied real-world conditions.</li>
+      </ul>
+      <p>
+        After cleaning (removing mislabelled and non-face images), all images were processed through Haar Cascade face detection, resized to 200×200 pixels, converted to grayscale, and normalised by dividing pixel values by 255. Underrepresented emotion classes were augmented through mirroring and rotation to balance the training distribution.
+      </p>
+    </section>
+
+    <section>
+      <h2>Models</h2>
+      <img src="assets/face-emotion.png" alt="Facial emotion recognition system" class="project-image">
+      <p>Two architectures were trained and compared:</p>
+      <ul class="detail-list">
+        <li><strong>Custom CNN</strong> — a convolutional network trained from scratch, achieving <strong>71% accuracy</strong>.</li>
+        <li><strong>DenseNet169 (transfer learning)</strong> — pre-trained ImageNet weights with the classification head trained first, then all layers unfrozen and fine-tuned end-to-end with a small learning rate, achieving <strong>81% accuracy</strong>.</li>
+      </ul>
+      <p>
+        The transfer learning approach substantially outperformed the custom CNN, benefiting from rich feature representations learned on large-scale image data and requiring far fewer samples to generalise well on the target distribution.
+      </p>
+    </section>
+
+    <section>
+      <h2>System Architecture</h2>
+      <p>
+        The inference pipeline runs as follows: OpenCV captures frames from the webcam and Haar Cascade classifiers detect and crop face regions. Each face crop is passed to the DenseNet169 classifier served via a FastAPI endpoint. The annotated video stream — with predicted emotion labels overlaid — is rendered through a Flask application accessible in the browser.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Louis Arts</p>
+    </footer>
+
+  </div>
+</body>
+</html>

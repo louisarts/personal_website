@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LLM Noise Injection Pipeline · Louis Arts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <nav class="back-nav"><a href="index.html">← Louis Arts</a></nav>
+
+    <header>
+      <h1>LLM Noise Injection Pipeline</h1>
+      <p class="tagline">Applied NLP Internship · LemonAI, London · Jan – May 2025</p>
+      <span class="tags" style="margin-top:0.75rem;display:inline-block;">Python · Claude API · NLP · Data Engineering</span>
+    </header>
+
+    <section>
+      <h2>Context</h2>
+      <p>
+        NLP models trained on clean, well-formed transcripts often degrade significantly when deployed on real-world speech output. Production transcription data is noisy in ways that are difficult to anticipate: filled pauses (<em>um</em>, <em>uh</em>), repetitions, mid-word interruptions, phonetic substitutions, overlapping speech artefacts, and domain-specific disfluencies. When training data doesn't reflect this distribution, models become brittle at exactly the point where reliability matters most.
+      </p>
+      <p>
+        This project, carried out during an Applied NLP internship at LemonAI in London, addressed this gap by building a system to inject realistic linguistic noise into clean transcription data — expanding training distributions without requiring additional labelled data collection.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research</h2>
+      <p>
+        The first phase involved analysing large transcription datasets to systematically categorise the types of noise present in real speech-to-text output. This produced a structured taxonomy of noise patterns covering lexical, phonetic, prosodic, and structural variation — which directly informed the design of both pipeline components.
+      </p>
+    </section>
+
+    <section>
+      <h2>Pipeline Design</h2>
+      <img src="assets/lemonai.png" alt="LemonAI NLP pipeline" class="project-image">
+      <p>The pipeline combines two complementary components:</p>
+      <ul class="detail-list">
+        <li>
+          <strong>Rule-based component</strong> — deterministic noise injection grounded in the pattern taxonomy. Operations include filler word insertion at statistically plausible positions, word-level substitutions using phonetic similarity mappings, repetition injection, and function word deletion. Fast and fully controllable, but limited to patterns that can be explicitly encoded as rules.
+        </li>
+        <li>
+          <strong>LLM component (Claude API)</strong> — generative noise injection that produces naturalistic, contextually coherent linguistic variation. This component handles patterns that are difficult to capture with rules: context-dependent disfluencies, realistic partial repairs, and stylistic variation across speaker types. The model was prompted to simulate specific noise profiles while preserving the semantic content of the original text.
+        </li>
+      </ul>
+      <p>
+        The two components were designed to be complementary: the rule-based system handles high-volume, low-variance noise at speed, while the LLM handles cases where naturalness and coherence matter more than throughput.
+      </p>
+    </section>
+
+    <section>
+      <h2>Outcome</h2>
+      <p>
+        The pipeline produced augmented training data that more closely mirrored the distribution of real production transcription output. Downstream NLP models trained on the augmented data demonstrated improved robustness to the types of noise present in real deployments — the core goal of the internship project.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Louis Arts</p>
+    </footer>
+
+  </div>
+</body>
+</html>
