@@ -244,8 +244,18 @@ section a:hover { text-decoration: underline; }
 .institution {
   color: var(--muted);
   font-size: 0.825rem;
-  display: block;
-  margin-top: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.15rem;
+}
+
+.edu-logo {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .edu-detail {
