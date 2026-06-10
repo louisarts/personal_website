@@ -375,8 +375,8 @@ section a:hover { text-decoration: underline; }
   transition: opacity 0.15s;
 }
 
-.edu-logo-link { display: flex; align-items: center; justify-content: center; }
-.edu-logo-link:hover .edu-logo { opacity: 1; }
+.edu-title-link { color: inherit; text-decoration: none; }
+.edu-title-link:hover { color: var(--accent); }
 
 .edu-logo-col--wide { width: 160px; }
 .logo-lewagon { max-width: 160px; max-height: 42px; }
