@@ -1,5 +1,9 @@
-function toggleTheme() {
-  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
+function setTheme(name) {
+  if (name === 'light') {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.removeItem('site-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', name);
+    localStorage.setItem('site-theme', name);
+  }
 }
