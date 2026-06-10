@@ -418,6 +418,70 @@ section a:hover { text-decoration: underline; }
 /* ── Dark mode overrides ── */
 [data-theme="dark"] .abstract-block { background: var(--tag-bg); }
 
+/* ── Sticky nav ── */
+#site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transform: translateY(-100%);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#site-nav.visible { transform: translateY(0); }
+
+.site-nav-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0.65rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav-name {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav-links a {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.site-nav-links a:hover,
+.site-nav-links a.active { color: var(--accent); }
+
+section[id] { scroll-margin-top: 52px; }
+
+/* ── Primary CTA ── */
+.links a.cv-link {
+  background: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-right: 1.1rem;
+}
+
+.links a.cv-link,
+.links a.cv-link:hover { color: #fff; text-decoration: none; }
+
 /* ── Footer ── */
 footer {
   margin-top: 2rem;
@@ -426,6 +490,20 @@ footer {
   font-size: 0.775rem;
   color: var(--muted);
 }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover { color: var(--accent); }
 
 /* ── Responsive ── */
 @media (max-width: 540px) {
@@ -438,4 +516,5 @@ footer {
   .edu-list li { flex-direction: column; gap: 0.3rem; }
   .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
+  .site-nav-links { display: none; }
 }

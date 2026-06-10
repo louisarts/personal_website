@@ -11,6 +11,18 @@
 </head>
 <body>
 
+  <nav id="site-nav">
+    <div class="site-nav-inner">
+      <a href="#" class="site-nav-name">Louis Arts</a>
+      <div class="site-nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
 
     <!-- Header -->
@@ -21,7 +33,7 @@
           <h1>Louis Arts</h1>
           <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
           <nav class="links">
-            <a href="Curriculum_Vitae.pdf" target="_blank">CV</a>
+            <a href="Curriculum_Vitae.pdf" target="_blank" class="cv-link">CV</a>
             <a href="mailto:artslouis@gmail.com">Email</a>
             <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
             <a href="https://github.com/louisarts" target="_blank">GitHub</a>
@@ -35,7 +47,7 @@
     </header>
 
     <!-- About -->
-    <section>
+    <section id="about">
       <h2>About</h2>
       <p>
         I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP. I'm interested in building models that generalise well beyond their training distribution and systems that are both technically rigorous and practically useful.
@@ -46,7 +58,7 @@
     </section>
 
     <!-- News -->
-    <section>
+    <section id="news">
       <h2>News</h2>
       <ul class="news-list">
         <li>
@@ -69,7 +81,7 @@
     </section>
 
     <!-- Projects -->
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <ul class="project-list">
 
@@ -117,7 +129,7 @@
     </section>
 
     <!-- Education -->
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <ul class="edu-list">
         <li>
@@ -176,10 +188,40 @@
     </section>
 
     <footer>
-      <p>© 2025 Louis Arts</p>
+      <div class="footer-links">
+        <a href="Curriculum_Vitae.pdf" target="_blank">CV</a>
+        <a href="mailto:artslouis@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/louisarts" target="_blank">GitHub</a>
+      </div>
+      <p>© 2026 Louis Arts</p>
     </footer>
 
   </div>
   <script src="theme.js"></script>
+  <script>
+    (function () {
+      var nav = document.getElementById('site-nav');
+      var header = document.querySelector('header');
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.site-nav-links a');
+
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('visible', header.getBoundingClientRect().bottom < 0);
+      }, { passive: true });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+
+      sections.forEach(function (s) { observer.observe(s); });
+    })();
+  </script>
 </body>
 </html>
