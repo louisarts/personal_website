@@ -17,6 +17,7 @@
       <div class="site-nav-links">
         <a href="#about">About</a>
         <a href="#news">News</a>
+        <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
       </div>
@@ -46,6 +47,7 @@
         </div>
       </div>
       <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
+      <p class="availability"><span class="avail-dot"></span>Open to DS/ML roles · London · from Sep 2026</p>
       <nav class="links">
         <a href="Curriculum_Vitae.pdf" target="_blank" class="cv-link">CV</a>
         <a href="mailto:artslouis@gmail.com">Email</a>
@@ -90,6 +92,33 @@
       </ul>
     </section>
 
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pub-list">
+
+        <li class="pub">
+          <div class="pub-body">
+            <h3 class="pub-title"><a href="polyfact.html">Cross-Lingual Factual Recall via Reinforcement Learning</a></h3>
+            <p class="pub-meta">Jonathan von Rad, George Burgess, Louis Arts et al. &nbsp;·&nbsp; EMNLP 2026 <span class="pub-status">Under review</span></p>
+            <p class="pub-desc">Benchmarked cross-lingual factual consistency in LLMs across 100K Wikidata facts and 12 typologically diverse languages. Contributed mechanistic interpretability analysis showing GRPO training reorganises language-specific MLP neurons toward deeper, more generalised layers.</p>
+            <a href="https://arxiv.org/abs/2606.06586" target="_blank">arXiv</a>
+            <a href="https://github.com/jvonrad/Lost-in-Mistranslation/tree/main" target="_blank">GitHub</a>
+          </div>
+        </li>
+
+        <li class="pub">
+          <div class="pub-body">
+            <h3 class="pub-title"><a href="thesis.html">Evaluating the Predictive Capacity of FLARES Simulations for High Redshift 'Little Red Dots'</a></h3>
+            <p class="pub-meta">Louis Arts &nbsp;·&nbsp; MSc Thesis, Imperial College London &nbsp;·&nbsp; 2023 &nbsp;·&nbsp; arXiv:2412.05946</p>
+            <a href="https://arxiv.org/abs/2412.05946" target="_blank">arXiv</a>
+            <a href="thesis.html">Details</a>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
     <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
@@ -99,7 +128,7 @@
           <img src="assets/polyfact-fig1.png" alt="PolyFact cross-lingual factual recall" class="project-thumb project-thumb-img">
           <div class="project-body">
             <h3><a href="polyfact.html">Cross-Lingual Factual Recall via Reinforcement Learning</a></h3>
-            <p>Mechanistic interpretability of multilingual LLMs, probing language-specific neurons and MLP activation patterns to understand how GRPO training improves cross-lingual generalisation.</p>
+            <p>Benchmarked cross-lingual factual recall across 100K Wikidata facts and 12 languages; led mechanistic interpretability analysis identifying language-specific MLP neurons and showing GRPO training shifts processing to deeper, more general layers.</p>
             <span class="tags">Python · Mechanistic Interpretability · LLMs · NLP · GRPO</span><br>
             <a href="https://arxiv.org/abs/2606.06586" target="_blank">arXiv</a>
             <a href="https://github.com/jvonrad/Lost-in-Mistranslation/tree/main" target="_blank">GitHub</a>
@@ -130,7 +159,7 @@
           <img src="assets/lemonai.png" alt="LemonAI NLP pipeline" class="project-thumb project-thumb-img">
           <div class="project-body">
             <h3><a href="lemon-nlp.html">LLM Noise Injection Pipeline</a> <span class="work-badge">Internship</span></h3>
-            <p>Hybrid rule-based and LLM-driven data augmentation pipeline to simulate realistic transcription noise and improve out-of-distribution robustness of NLP models.</p>
+            <p>Hybrid rule-based + Claude API data augmentation pipeline synthesising realistic transcription noise (disfluencies, phonetic substitutions, filled pauses, repetitions) to expand training distribution and reduce OOD degradation in production speech NLP models.</p>
             <span class="tags">Python · Claude API · NLP · Data Engineering</span>
           </div>
         </li>

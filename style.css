@@ -88,6 +88,29 @@ header {
 .header-content > p.tagline { display: block; }
 .header-content > nav.links { display: flex; }
 
+.availability {
+  font-size: 0.775rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.avail-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0px rgba(34,197,94,0.4); }
+  50%       { box-shadow: 0 0 0 4px rgba(34,197,94,0); }
+}
+
 h1 {
   font-family: 'Lora', Georgia, serif;
   font-size: 1.9rem;
@@ -257,6 +280,60 @@ section a:hover { text-decoration: underline; }
   margin-left: 0.35rem;
   letter-spacing: 0.02em;
 }
+
+/* ── Publications ── */
+.pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pub-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.pub-title a { color: var(--text); text-decoration: none; }
+.pub-title a:hover { color: var(--accent); }
+
+.pub-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.pub-status {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.05rem 0.4rem;
+  border-radius: 20px;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+.pub-desc {
+  font-size: 0.855rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.pub-body a {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 0.75rem;
+}
+
+.pub-body a:hover { text-decoration: underline; }
 
 /* ── Education ── */
 .edu-list {
@@ -651,6 +728,25 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 [data-theme="neon"] footer {
   border-top-color: rgba(0,255,229,0.18);
   text-shadow: 0 0 6px rgba(0,255,229,0.3);
+}
+
+[data-theme="neon"] .avail-dot {
+  background: var(--accent);
+  animation: pulse-dot 2.5s ease-in-out infinite,
+             neon-ring-pulse 2.5s ease-in-out infinite;
+}
+
+[data-theme="neon"] .pub-status {
+  text-shadow: 0 0 6px var(--accent);
+  box-shadow: 0 0 6px rgba(0,255,229,0.2);
+}
+
+[data-theme="neon"] .pub-title a {
+  text-shadow: 0 0 5px rgba(216,216,240,0.3);
+}
+
+[data-theme="neon"] .pub-title a:hover {
+  text-shadow: 0 0 10px var(--accent), 0 0 22px rgba(0,255,229,0.4);
 }
 
 /* Pulsing animations */
