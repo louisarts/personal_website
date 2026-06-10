@@ -376,7 +376,7 @@ section a:hover { text-decoration: underline; }
 }
 
 .edu-title-link { color: inherit; text-decoration: none; }
-.edu-title-link:hover { color: var(--accent); }
+.edu-title-link:hover { text-decoration: underline; }
 
 .edu-logo-col--wide { width: 160px; }
 .logo-lewagon { max-width: 160px; max-height: 42px; }
