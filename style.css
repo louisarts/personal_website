@@ -378,10 +378,6 @@ section a:hover { text-decoration: underline; }
 .edu-title-link { color: inherit; text-decoration: none; }
 .edu-title-link:hover { text-decoration: underline; }
 
-.edu-logo-col--wide { width: 160px; }
-.logo-lewagon { max-width: 160px; max-height: 42px; }
-[data-theme="dark"] .logo-lewagon,
-[data-theme="neon"] .logo-lewagon { filter: brightness(0) invert(1); }
 
 
 .edu-content {
