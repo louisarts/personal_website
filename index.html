@@ -3,286 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Louis Arts — Data Scientist &amp; ML Researcher</title>
+  <title>Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
 </head>
 <body>
 
-  <!-- Minimal nav — fades in on scroll past hero -->
-  <nav id="top-nav">
-    <div class="nav-inner">
-      <span class="nav-name">Louis Arts</span>
-      <div class="nav-links">
-        <a href="Curriculum_Vitae.pdf" target="_blank" class="nav-cv">CV</a>
-        <a href="mailto:artslouis@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/louisarts" target="_blank">GitHub</a>
+  <nav id="site-nav">
+    <div class="site-nav-inner">
+      <a href="#" class="site-nav-name">Louis Arts</a>
+      <div class="site-nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
       </div>
     </div>
   </nav>
 
-  <!-- ───── HERO ───── -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Data Scientist &amp; ML Researcher</p>
-      <h1 class="hero-name">Louis Arts</h1>
-      <p class="hero-desc">
-        Building models that generalise. MSc DS&amp;ML at UCL, with a background in physics and a focus on NLP, mechanistic interpretability, and computer vision.
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="header-main">
+      <img src="assets/louisface.png" alt="Louis Arts" class="profile-photo" width="126" height="126">
+      <div class="header-content">
+      <div class="header-name-row">
+        <h1>Louis Arts</h1>
+        <div class="theme-picker">
+          <button class="theme-toggle" aria-label="Theme">
+            <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </button>
+          <div class="theme-dropdown">
+            <button data-for="light" onclick="setTheme('light')">Light</button>
+            <button data-for="dark" onclick="setTheme('dark')">Dark</button>
+            <button data-for="neon" onclick="setTheme('neon')">Neon</button>
+          </div>
+        </div>
+      </div>
+      <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
+      <p class="availability"><span class="avail-dot"></span>Open to DS/ML roles · London · from Sep 2026</p>
+      <nav class="links">
+        <a href="Curriculum_Vitae.pdf" target="_blank" class="cv-link">CV</a>
+        <a href="mailto:artslouis@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/louisarts" target="_blank">GitHub</a>
+      </nav>
+      </div><!-- /header-content -->
+      </div><!-- /header-main -->
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP. I'm interested in building models that generalise well beyond their training distribution and systems that are both technically rigorous and practically useful.
       </p>
-      <div class="hero-actions">
-        <a href="Curriculum_Vitae.pdf" target="_blank" class="btn-primary">View CV</a>
-        <a href="mailto:artslouis@gmail.com" class="btn-ghost">artslouis@gmail.com</a>
-      </div>
-      <p class="hero-availability">
-        <span class="avail-dot"></span>
-        Open to DS/ML roles · London · from Sep 2026
+      <p>
+        Previously, I interned at LemonAI in London, where I researched linguistic noise patterns in transcription data and built hybrid NLP data augmentation pipelines using the Claude API. I'm fluent in Dutch, French, and English, and I'm based in London.
       </p>
-    </div>
-    <div class="hero-photo">
-      <img src="assets/louisface.png" alt="Louis Arts" width="280" height="280">
-    </div>
-  </section>
+    </section>
 
-  <!-- ───── WORK ───── -->
-  <section class="section" id="work">
-    <div class="wrap">
-      <p class="section-label">Work</p>
-      <h2 class="section-title">Projects &amp; Research</h2>
+    <!-- News -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="date">Jun 2026</span>
+          Submitted research on cross-lingual factual recall in large language models to EMNLP 2026. Paper currently under review.
+        </li>
+        <li>
+          <span class="date">Dec 2025</span>
+          Published an article on Medium on my passion project: building a mobile eye-tracking system from scratch, training a three-branch CNN on 1.5M+ frames to achieve sub-centimetre gaze accuracy.
+        </li>
+        <li>
+          <span class="date">Sep 2025</span>
+          Began the MSc in Data Science and Machine Learning at University College London.
+        </li>
+        <li>
+          <span class="date">Oct 2023</span>
+          Graduated with an MSc in Physics (Astrophysics) from Imperial College London, completing a research thesis on galaxy simulations for objects observed by the James Webb Space Telescope.
+        </li>
+      </ul>
+    </section>
 
-      <div class="card-grid">
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="project-list">
 
-        <div class="card">
-          <img src="assets/polyfact-fig1.png" alt="PolyFact cross-lingual factual recall" class="card-cover">
-          <div class="card-body">
-            <p class="card-category">Research · 2025</p>
-            <h3 class="card-title"><a href="polyfact.html">Cross-Lingual Factual Recall via Reinforcement Learning</a></h3>
-            <p class="card-desc">Benchmarked 100K Wikidata facts across 12 languages. Led mechanistic interpretability analysis showing GRPO training shifts processing to deeper, more language-agnostic layers.</p>
-            <div class="card-tags">
-              <span class="tag">NLP</span>
-              <span class="tag">Mechanistic Interpretability</span>
-              <span class="tag">GRPO</span>
-              <span class="tag">LLMs</span>
-            </div>
-            <div class="card-links">
-              <a href="https://arxiv.org/abs/2606.06586" target="_blank">arXiv ↗</a>
-              <a href="https://github.com/jvonrad/Lost-in-Mistranslation/tree/main" target="_blank">GitHub ↗</a>
-              <a href="polyfact.html">Read more →</a>
-            </div>
+        <li class="project">
+          <img src="assets/polyfact-fig1.png" alt="PolyFact cross-lingual factual recall" class="project-thumb project-thumb-img">
+          <div class="project-body">
+            <h3><a href="polyfact.html">Cross-Lingual Factual Recall via Reinforcement Learning</a></h3>
+            <p>Benchmarked cross-lingual factual recall across 100K Wikidata facts and 12 languages; led mechanistic interpretability analysis identifying language-specific MLP neurons and showing GRPO training shifts processing to deeper, more general layers.</p>
+            <span class="tags">Python · Mechanistic Interpretability · LLMs · NLP · GRPO</span><br>
+            <a href="https://arxiv.org/abs/2606.06586" target="_blank">arXiv</a>
+            <a href="https://github.com/jvonrad/Lost-in-Mistranslation/tree/main" target="_blank">GitHub</a>
           </div>
-        </div>
+        </li>
 
-        <div class="card">
-          <img src="assets/eye-tracking-architecture.png" alt="Eye-tracking CNN architecture" class="card-cover">
-          <div class="card-body">
-            <p class="card-category">Personal Project · 2024</p>
-            <h3 class="card-title"><a href="https://medium.com/@artslouis/the-10-lessons-i-learned-building-an-eye-tracking-model-from-scratch-fa59349ba65d" target="_blank">End-to-End Mobile Eye-Tracking System</a></h3>
-            <p class="card-desc">Three-branch CNN trained on 1.5M+ augmented frames, achieving 1.4 cm MAE on held-out test set. Deployed as a real-time mobile prototype.</p>
-            <div class="card-tags">
-              <span class="tag">PyTorch</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">CNN</span>
-              <span class="tag">Mobile</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/louisarts/Mobile-Eye-Tracking-Project/tree/main" target="_blank">GitHub ↗</a>
-              <a href="https://medium.com/@artslouis/the-10-lessons-i-learned-building-an-eye-tracking-model-from-scratch-fa59349ba65d" target="_blank">Article ↗</a>
-            </div>
+        <li class="project">
+          <img src="assets/eye-tracking-architecture.png" alt="Eye-tracking CNN architecture" class="project-thumb project-thumb-img">
+          <div class="project-body">
+            <h3><a href="https://medium.com/@artslouis/the-10-lessons-i-learned-building-an-eye-tracking-model-from-scratch-fa59349ba65d" target="_blank">End-to-End Mobile Eye-Tracking System</a></h3>
+            <p>Three-branch CNN trained on 1.5M+ augmented frames with custom data preprocessing, achieving 1.4 cm MAE on a held-out test set and deployed as a real-time mobile prototype.</p>
+            <span class="tags">Python · PyTorch · Computer Vision · Mobile</span><br>
+            <a href="https://github.com/louisarts/Mobile-Eye-Tracking-Project/tree/main" target="_blank">GitHub</a>
           </div>
-        </div>
+        </li>
 
-        <div class="card">
-          <img src="assets/lemonai.png" alt="LemonAI NLP pipeline" class="card-cover">
-          <div class="card-body">
-            <p class="card-category">Internship · LemonAI, London · 2025</p>
-            <h3 class="card-title"><a href="lemon-nlp.html">LLM Noise Injection Pipeline</a></h3>
-            <p class="card-desc">Hybrid rule-based + Claude API pipeline synthesising realistic transcription noise to expand training distribution and reduce OOD degradation in production speech NLP models.</p>
-            <div class="card-tags">
-              <span class="tag">Claude API</span>
-              <span class="tag">NLP</span>
-              <span class="tag">Data Engineering</span>
-              <span class="tag">Python</span>
-            </div>
-            <div class="card-links">
-              <a href="lemon-nlp.html">Read more →</a>
-            </div>
+        <li class="project">
+          <img src="assets/face-emotion.png" alt="Facial emotion recognition" class="project-thumb project-thumb-img">
+          <div class="project-body">
+            <h3><a href="emotion-recognition.html">Real-Time Facial Emotion Recognition</a></h3>
+            <p>Transfer learning on DenseNet169 with data augmentation, achieving 81% test accuracy on a class-balanced dataset of 40K+ labelled images. Presented at Le Wagon Demo Day.</p>
+            <span class="tags">Python · PyTorch · Transfer Learning · OpenCV</span><br>
+            <a href="https://github.com/louisarts/AIdentify_repo" target="_blank">GitHub</a>
           </div>
-        </div>
+        </li>
 
-        <div class="card">
-          <img src="assets/face-emotion.png" alt="Facial emotion recognition" class="card-cover">
-          <div class="card-body">
-            <p class="card-category">Project · Le Wagon, Zurich · 2022</p>
-            <h3 class="card-title"><a href="emotion-recognition.html">Real-Time Facial Emotion Recognition</a></h3>
-            <p class="card-desc">Transfer learning on DenseNet169 with data augmentation, achieving 81% test accuracy on 40K+ labelled images. Presented at Le Wagon Demo Day.</p>
-            <div class="card-tags">
-              <span class="tag">PyTorch</span>
-              <span class="tag">Transfer Learning</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">DenseNet</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/louisarts/AIdentify_repo" target="_blank">GitHub ↗</a>
-              <a href="emotion-recognition.html">Read more →</a>
-            </div>
+        <li class="project">
+          <img src="assets/lemonai.png" alt="LemonAI NLP pipeline" class="project-thumb project-thumb-img">
+          <div class="project-body">
+            <h3><a href="lemon-nlp.html">LLM Noise Injection Pipeline</a> <span class="work-badge">Internship</span></h3>
+            <p>Hybrid rule-based + Claude API data augmentation pipeline synthesising realistic transcription noise (disfluencies, phonetic substitutions, filled pauses, repetitions) to expand training distribution and reduce OOD degradation in production speech NLP models.</p>
+            <span class="tags">Python · Claude API · NLP · Data Engineering</span>
           </div>
-        </div>
+        </li>
 
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li>
+          <div class="edu-logo-col">
+            <img src="assets/logos/ucl.svg" alt="UCL" class="edu-logo">
+          </div>
+          <div class="edu-content">
+            <div class="edu-row">
+              <strong>MSc Data Science and Machine Learning</strong>
+              <span class="date">2025 – present</span>
+            </div>
+            <span class="institution">University College London</span>
+            <p class="edu-detail">Computer Vision · Statistical Data Science · Applied ML/DL · Reinforcement Learning · Bayesian DL · Statistical NLP</p>
+          </div>
+        </li>
+        <li>
+          <div class="edu-logo-col">
+            <img src="assets/logos/imperial.png" alt="Imperial" class="edu-logo">
+          </div>
+          <div class="edu-content">
+            <div class="edu-row">
+              <strong>MSc Physics (Astrophysics)</strong>
+              <span class="date">2022 – 2023</span>
+            </div>
+            <span class="institution">Imperial College London</span>
+            <p class="edu-detail">General Relativity · Cosmology · Research Computing</p>
+            <p class="edu-detail" style="margin-top:0.3rem;"><a href="thesis.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">Thesis: Evaluating FLARES Simulations for High Redshift 'Little Red Dots' →</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="edu-logo-col">
+            <img src="assets/logos/lewagon.svg" alt="Le Wagon" class="edu-logo">
+          </div>
+          <div class="edu-content">
+            <div class="edu-row">
+              <strong>Data Science Bootcamp</strong>
+              <span class="date">Oct – Dec 2022</span>
+            </div>
+            <span class="institution">Le Wagon, Zurich</span>
+          </div>
+        </li>
+        <li>
+          <div class="edu-logo-col">
+            <img src="assets/logos/maastricht.png" alt="Maastricht University" class="edu-logo">
+          </div>
+          <div class="edu-content">
+            <div class="edu-row">
+              <strong>BSc Maastricht Science Programme (Physics)</strong>
+              <span class="date">2018 – 2022</span>
+            </div>
+            <span class="institution">Maastricht University</span>
+            <p class="edu-detail" style="margin-top:0.3rem;"><a href="bsc-thesis.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">Thesis: Matter-energy density evolution in time-varying speed of light cosmology →</a></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="Curriculum_Vitae.pdf" target="_blank">CV</a>
+        <a href="mailto:artslouis@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/louisarts" target="_blank">GitHub</a>
       </div>
-    </div>
-  </section>
+      <p>© 2026 Louis Arts</p>
+    </footer>
 
-  <!-- ───── ABOUT ───── -->
-  <section class="section" id="about">
-    <div class="wrap">
-      <p class="section-label">About</p>
-      <h2 class="section-title">Who I am</h2>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP — I'm interested in building models that <strong>generalise well beyond their training distribution</strong> and systems that are both technically rigorous and practically useful.
-          </p>
-          <p>
-            Previously, I interned at LemonAI in London, where I researched linguistic noise patterns in transcription data and built hybrid NLP data augmentation pipelines using the Claude API. Outside ML, I have a deep interest in astrophysics and theoretical cosmology — my academic theses explored galaxy simulations and time-varying speed of light cosmologies.
-          </p>
-          <p>
-            I'm fluent in Dutch, French, and English, and I'm based in London.
-          </p>
-        </div>
-
-        <div class="about-stats">
-          <div>
-            <p class="stat-group-label">Location</p>
-            <div class="stat-chips">
-              <span class="chip">London, UK</span>
-            </div>
-          </div>
-          <div>
-            <p class="stat-group-label">Languages</p>
-            <div class="stat-chips">
-              <span class="chip">English</span>
-              <span class="chip">Dutch</span>
-              <span class="chip">French</span>
-            </div>
-          </div>
-          <div>
-            <p class="stat-group-label">Stack</p>
-            <div class="stat-chips">
-              <span class="chip">Python</span>
-              <span class="chip">PyTorch</span>
-              <span class="chip">Hugging Face</span>
-              <span class="chip">scikit-learn</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">SQL</span>
-            </div>
-          </div>
-          <div>
-            <p class="stat-group-label">Domains</p>
-            <div class="stat-chips">
-              <span class="chip">NLP</span>
-              <span class="chip">Computer Vision</span>
-              <span class="chip">Mech. Interp.</span>
-              <span class="chip">RL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ───── BACKGROUND ───── -->
-  <section class="section" id="background">
-    <div class="wrap">
-      <p class="section-label">Background</p>
-      <h2 class="section-title">Education &amp; Experience</h2>
-
-      <div class="timeline">
-
-        <div class="tl-item">
-          <p class="tl-date">Sep 2025 – present</p>
-          <p class="tl-role">MSc Data Science and Machine Learning</p>
-          <p class="tl-where">University College London · London</p>
-          <p class="tl-desc">Computer Vision · Statistical Data Science · Applied ML/DL · Reinforcement Learning · Bayesian DL · Statistical NLP</p>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-date">Jan – May 2025</p>
-          <p class="tl-role">NLP Research Intern</p>
-          <p class="tl-where">LemonAI · London</p>
-          <p class="tl-desc">Built a hybrid rule-based + LLM data augmentation pipeline for transcription noise injection. Reduced OOD degradation in production speech NLP models.</p>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-date">Oct 2022 – Oct 2023</p>
-          <p class="tl-role">MSc Physics (Astrophysics)</p>
-          <p class="tl-where">Imperial College London · London</p>
-          <p class="tl-desc">Specialisation in General Relativity, Cosmology, and Research Computing. <a href="thesis.html" style="color:var(--accent);">Thesis: Evaluating FLARES galaxy simulations for JWST 'Little Red Dots' →</a></p>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-date">Oct – Dec 2022</p>
-          <p class="tl-role">Data Science Bootcamp</p>
-          <p class="tl-where">Le Wagon · Zurich</p>
-          <p class="tl-desc">Intensive programme covering ML fundamentals, data engineering, and model deployment. Capstone: real-time facial emotion recognition system.</p>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-date">Sep 2018 – Jun 2022</p>
-          <p class="tl-role">BSc Maastricht Science Programme (Physics)</p>
-          <p class="tl-where">Maastricht University · Maastricht</p>
-          <p class="tl-desc"><a href="bsc-thesis.html" style="color:var(--accent);">Thesis: Matter-energy density evolution in time-varying speed of light cosmology →</a></p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ───── FOOTER ───── -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-cta">
-        <p class="footer-cta-label">Get in touch</p>
-        <a href="mailto:artslouis@gmail.com" class="footer-email">artslouis@gmail.com</a>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Louis Arts</span>
-        <div class="footer-social">
-          <a href="Curriculum_Vitae.pdf" target="_blank">CV</a>
-          <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/louisarts" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating theme toggle -->
-  <div class="theme-float">
-    <div class="theme-picker">
-      <button class="theme-toggle" aria-label="Theme">
-        <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-      </button>
-      <div class="theme-dropdown">
-        <button data-for="light" onclick="setTheme('light')">Light</button>
-        <button data-for="dark" onclick="setTheme('dark')">Dark</button>
-        <button data-for="neon" onclick="setTheme('neon')">Neon</button>
-      </div>
-    </div>
   </div>
-
   <script src="theme.js"></script>
   <script>
     (function () {
-      var nav = document.getElementById('top-nav');
-      var hero = document.querySelector('.hero');
+      var nav = document.getElementById('site-nav');
+      var header = document.querySelector('header');
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.site-nav-links a');
+
       window.addEventListener('scroll', function () {
-        nav.classList.toggle('visible', window.scrollY > hero.offsetHeight * 0.6);
+        nav.classList.toggle('visible', header.getBoundingClientRect().bottom < 0);
       }, { passive: true });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+
+      sections.forEach(function (s) { observer.observe(s); });
     })();
   </script>
 </body>

@@ -6,81 +6,48 @@
   <title>LLM Noise Injection Pipeline · Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
 </head>
 <body>
+  <div class="container">
 
-  <nav class="subpage-nav">
-    <div class="subpage-nav-inner">
-      <a href="index.html" class="back-link">← Louis Arts</a>
-    </div>
-  </nav>
-
-  <main class="article-wrap">
-
-    <p class="article-category">Internship · LemonAI, London · Jan – May 2025</p>
-    <h1 class="article-title">LLM Noise Injection Pipeline</h1>
-    <p class="article-meta">Applied NLP Research Internship</p>
-
-    <div class="article-tags">
-      <span class="tag">Python</span>
-      <span class="tag">Claude API</span>
-      <span class="tag">NLP</span>
-      <span class="tag">Data Engineering</span>
-      <span class="tag">Data Augmentation</span>
-    </div>
-
-    <div class="article-links">
-      <a href="index.html#work">← Back to projects</a>
-    </div>
-
-    <div class="article-body">
-
-      <p>
-        LemonAI was a small London-based AI startup working on transcription and speech NLP. I joined as an applied NLP intern from January to May 2025. The core problem I worked on was <strong>distribution shift</strong>: NLP models trained on clean transcripts often degrade in production because real speech output is full of noise — filled pauses, repetitions, phonetic substitutions, and disfluencies — that simply doesn't appear in training data.
-      </p>
-
-      <p>
-        To close that gap, I designed and built a data augmentation pipeline to inject realistic linguistic noise into clean transcription data, expanding the training distribution without requiring additional labelled examples.
-      </p>
-
-      <h2>Architecture</h2>
-
-      <p>
-        The pipeline combined two modules. A <strong>rule-based component</strong> handled deterministic, high-volume noise injection — patterns that can be formally specified and applied efficiently at scale. A <strong>Claude API component</strong> handled generative, contextually coherent variation — the kind of disfluency that rules alone can't replicate, where the noise needs to be semantically plausible and contextually situated within the utterance.
-      </p>
-
-      <p>
-        The two modules were composable, allowing fine-grained control over noise type and severity to target specific failure modes observed during model evaluation. The system could be configured to produce training data matched to particular observed degradation patterns.
-      </p>
-
-      <h2>What I Learned</h2>
-
-      <p>
-        Working at a small startup meant taking full ownership end-to-end: scoping the problem, surveying prior work, designing the system architecture, and iterating quickly without much process overhead. It taught me how research translates into production-facing tooling, and gave me a much clearer picture of how LLMs can function as <strong>components inside larger data pipelines</strong> rather than as standalone tools.
-      </p>
-
-    </div>
-
-  </main>
-
-  <!-- Floating theme toggle -->
-  <div class="theme-float">
-    <div class="theme-picker">
-      <button class="theme-toggle" aria-label="Theme">
-        <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-      </button>
-      <div class="theme-dropdown">
-        <button data-for="light" onclick="setTheme('light')">Light</button>
-        <button data-for="dark" onclick="setTheme('dark')">Dark</button>
-        <button data-for="neon" onclick="setTheme('neon')">Neon</button>
+    <nav class="back-nav">
+      <a href="index.html">← Louis Arts</a>
+      <div class="theme-picker">
+        <button class="theme-toggle" aria-label="Theme">
+          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </button>
+        <div class="theme-dropdown">
+          <button data-for="light" onclick="setTheme('light')">Light</button>
+          <button data-for="dark" onclick="setTheme('dark')">Dark</button>
+          <button data-for="neon" onclick="setTheme('neon')">Neon</button>
+        </div>
       </div>
-    </div>
-  </div>
+    </nav>
 
+    <header>
+      <h1>LLM Noise Injection Pipeline</h1>
+      <p class="tagline">Applied NLP Internship · LemonAI, London · Jan – May 2025</p>
+      <span class="tags" style="margin-top:0.75rem;display:inline-block;">Python · Claude API · NLP · Data Engineering</span>
+    </header>
+
+    <section>
+      <p>
+        LemonAI was a small London-based AI startup working on transcription and speech NLP. I joined as an applied NLP intern from January to May 2025. The core problem I worked on was that NLP models trained on clean transcripts often suffer from distribution shift in production: real speech output is full of noise that doesn't appear in training data, including filled pauses, repetitions, phonetic substitutions, and disfluencies. To close that gap, I designed and built a data augmentation pipeline to inject realistic linguistic noise into clean transcription data, expanding the training distribution without requiring additional labelled examples.
+      </p>
+      <p>
+        The pipeline combined a rule-based module for deterministic, high-volume noise injection with an LLM component using the Claude API for generative, contextually coherent variation — the kind of disfluency that rules alone can't replicate. The two modules were composable, allowing fine-grained control over noise type and severity to target specific failure modes observed during model evaluation. Working at a small startup meant taking ownership end-to-end: scoping the problem, surveying prior work, designing the system architecture, and iterating quickly without much process overhead. It taught me how research translates into production-facing tooling, and gave me a much clearer sense of how LLMs can be used as components inside larger data pipelines rather than as standalone tools.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Louis Arts</p>
+    </footer>
+
+  </div>
   <script src="theme.js"></script>
 </body>
 </html>
