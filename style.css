@@ -378,10 +378,6 @@ section a:hover { text-decoration: underline; }
 .edu-logo-link { display: flex; align-items: center; justify-content: center; }
 .edu-logo-link:hover .edu-logo { opacity: 1; }
 
-/* Le Wagon is a wide wordmark — let it use more width than other logos */
-.logo-lewagon { max-width: 160px; max-height: 42px; }
-[data-theme="dark"] .logo-lewagon,
-[data-theme="neon"] .logo-lewagon { filter: brightness(0) invert(1); }
 
 .edu-content {
   flex: 1;
@@ -940,7 +936,7 @@ footer {
   .news-list li { flex-direction: column; gap: 0.1rem; margin-left: 0; width: 100%; }
   .project { flex-direction: column; margin-left: 0; width: 100%; }
   .edu-list li { flex-direction: column; gap: 0.3rem; margin-left: 0; width: 100%; }
-  .logo-lewagon { max-width: 120px; }
+
   .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
   .site-nav-links { display: none; }
