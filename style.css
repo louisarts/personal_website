@@ -22,10 +22,10 @@
 [data-theme="neon"] {
   --bg:      #09090f;
   --text:    #d8d8f0;
-  --muted:   #6060a0;
-  --accent:  #00e5cc;
-  --border:  #1a1a35;
-  --tag-bg:  #0e0e20;
+  --muted:   #5a5a8a;
+  --accent:  #00ffe5;
+  --border:  #161630;
+  --tag-bg:  #0d0d1e;
 }
 
 
@@ -65,8 +65,8 @@ header {
 }
 
 .profile-photo {
-  width: 84px;
-  height: 84px;
+  width: 126px;
+  height: 126px;
   border-radius: 6px;
   object-fit: cover;
   flex-shrink: 0;
@@ -502,13 +502,94 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 
 .lessons-list li { padding-left: 0.2rem; }
 
-/* ── Dark/neon mode overrides ── */
+/* ── Dark mode overrides ── */
 [data-theme="dark"] .abstract-block { background: var(--tag-bg); }
+
+/* ── Neon mode overrides ── */
+[data-theme="neon"] body {
+  background-image:
+    linear-gradient(rgba(0,255,229,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,229,0.028) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 [data-theme="neon"] .abstract-block { background: var(--tag-bg); }
 
-[data-theme="neon"] h1 { text-shadow: 0 0 30px rgba(0, 229, 204, 0.12); }
-[data-theme="neon"] .links a.cv-link { box-shadow: 0 0 8px rgba(0, 229, 204, 0.3); }
-[data-theme="neon"] .theme-toggle { color: var(--accent); border-color: var(--accent); box-shadow: 0 0 6px rgba(0, 229, 204, 0.2); }
+[data-theme="neon"] header { border-bottom-color: rgba(0,255,229,0.18); }
+
+[data-theme="neon"] h1 {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #00ffe5,
+    0 0 82px #00ffe5,
+    0 0 92px #00ffe5;
+}
+
+[data-theme="neon"] h2 {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 22px rgba(0,255,229,0.4);
+  border-bottom-color: rgba(0,255,229,0.25);
+}
+
+[data-theme="neon"] .tagline { color: rgba(0,255,229,0.55); }
+
+[data-theme="neon"] .links a.cv-link,
+[data-theme="neon"] .links a.cv-link:hover {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  text-shadow: 0 0 6px var(--accent);
+  box-shadow: 0 0 14px rgba(0,255,229,0.3), inset 0 0 14px rgba(0,255,229,0.06);
+}
+
+[data-theme="neon"] .links a:not(.cv-link) { color: rgba(0,255,229,0.55); }
+[data-theme="neon"] .links a:not(.cv-link):hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+[data-theme="neon"] .project-thumb-img {
+  border-color: rgba(0,255,229,0.22);
+  box-shadow: 0 0 14px rgba(0,255,229,0.08);
+}
+
+[data-theme="neon"] .project-body h3 a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+[data-theme="neon"] section a {
+  text-shadow: 0 0 5px currentColor;
+}
+
+[data-theme="neon"] #site-nav {
+  background: rgba(9,9,15,0.85);
+  backdrop-filter: blur(14px);
+  border-bottom-color: rgba(0,255,229,0.15);
+}
+
+[data-theme="neon"] .site-nav-links a.active {
+  text-shadow: 0 0 8px currentColor;
+}
+
+[data-theme="neon"] .theme-toggle {
+  color: var(--accent);
+  border-color: rgba(0,255,229,0.45);
+  box-shadow: 0 0 8px rgba(0,255,229,0.2);
+}
+
+[data-theme="neon"] .profile-photo {
+  border-color: rgba(0,255,229,0.3);
+  box-shadow: 0 0 18px rgba(0,255,229,0.15);
+}
+
+[data-theme="neon"] footer {
+  border-top-color: rgba(0,255,229,0.12);
+}
 
 
 /* ── Sticky nav ── */
@@ -603,8 +684,8 @@ footer {
 @media (max-width: 540px) {
   .container { padding: 1.75rem 1.2rem 2.5rem; }
   h1 { font-size: 1.5rem; }
-  .header-main { gap: 0.75rem; }
-  .profile-photo { width: 62px; height: 62px; }
+  .header-main { gap: 0.85rem; }
+  .profile-photo { width: 88px; height: 88px; }
   .news-list li { flex-direction: column; gap: 0.1rem; }
   .project { flex-direction: column; }
   .edu-list li { flex-direction: column; gap: 0.3rem; }
