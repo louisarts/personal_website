@@ -112,7 +112,6 @@ header {
 }
 
 h1 {
-  font-family: 'Lora', Georgia, serif;
   font-size: 1.9rem;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -239,7 +238,6 @@ section a:hover { text-decoration: underline; }
 .nlp          { background: linear-gradient(135deg, #d0ecd4 0%, #85c98e 100%); }
 
 .project-body h3 {
-  font-family: 'Lora', Georgia, serif;
   font-size: 0.95rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
@@ -294,7 +292,6 @@ section a:hover { text-decoration: underline; }
 }
 
 .pub-title {
-  font-family: 'Lora', Georgia, serif;
   font-size: 0.95rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
@@ -871,7 +868,6 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 }
 
 .site-nav-name {
-  font-family: 'Lora', Georgia, serif;
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--text);
