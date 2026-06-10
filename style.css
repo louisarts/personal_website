@@ -395,7 +395,7 @@ section a:hover { text-decoration: underline; }
 }
 
 .edu-title-link { color: inherit; text-decoration: none; }
-.edu-title-link:hover { text-decoration: none; }
+.edu-title-link:hover { text-decoration: underline; }
 
 /* Stretched link: whole edu card is clickable via degree title */
 .edu-title-link::after {
