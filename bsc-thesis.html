@@ -6,108 +6,76 @@
   <title>BSc Thesis · Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
-  <style>
-    .thesis-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.5rem;
-      margin: 0.75rem 0 1rem;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-    .abstract-block {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      padding: 1.1rem 1.25rem;
-      font-size: 0.875rem;
-      line-height: 1.75;
-      color: var(--text);
-    }
-    .figure-item img {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      display: block;
-    }
-    .figure-caption {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-      line-height: 1.5;
-    }
-    .figure-caption strong {
-      font-weight: 500;
-      color: var(--text);
-    }
-    .figure-full {
-      margin-bottom: 1.25rem;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
 
-    <nav class="back-nav">
-      <a href="index.html">← Louis Arts</a>
-      <div class="theme-picker">
-        <button class="theme-toggle" aria-label="Theme">
-          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </button>
-        <div class="theme-dropdown">
-          <button data-for="light" onclick="setTheme('light')">Light</button>
-          <button data-for="dark" onclick="setTheme('dark')">Dark</button>
-          <button data-for="neon" onclick="setTheme('neon')">Neon</button>
-        </div>
-      </div>
-    </nav>
+  <nav class="subpage-nav">
+    <div class="subpage-nav-inner">
+      <a href="index.html" class="back-link">← Louis Arts</a>
+    </div>
+  </nav>
 
-    <header>
-      <h1>Matter-energy density evolution and spatial expansion in the context of time-varying speed of light cosmology</h1>
-      <div class="thesis-meta">
-        <span>BSc Thesis · Maastricht University</span>
-        <span>April 2022</span>
-        <span>Theoretical Cosmology</span>
-      </div>
-      <nav class="links">
-        <a href="https://www.researchgate.net/publication/365711983_Matter-energy_density_evolution_and_spatial_expansion_in_the_context_of_time-varying_speed_of_light_cosmology" target="_blank">ResearchGate →</a>
-      </nav>
-    </header>
+  <main class="article-wrap">
 
-    <section>
+    <p class="article-category">BSc Thesis · Maastricht University · April 2022</p>
+    <h1 class="article-title">Matter-energy density evolution and spatial expansion in the context of time-varying speed of light cosmology</h1>
+    <p class="article-meta">Theoretical Cosmology</p>
+
+    <div class="article-tags">
+      <span class="tag">Cosmology</span>
+      <span class="tag">General Relativity</span>
+      <span class="tag">Friedmann Equations</span>
+      <span class="tag">Theoretical Physics</span>
+    </div>
+
+    <div class="article-links">
+      <a href="https://www.researchgate.net/publication/365711983_Matter-energy_density_evolution_and_spatial_expansion_in_the_context_of_time-varying_speed_of_light_cosmology" target="_blank">ResearchGate ↗</a>
+    </div>
+
+    <div class="article-body">
+
       <h2>Abstract</h2>
-      <div class="abstract-block">
-        This paper analyzes how the introduction of a time-varying speed of light effects the evolution of matter-energy component densities in specific component domination epochs. To answer this question, the Friedmann equations and continuity equation for a generic varying speed of light were analytically derived. A specific time-varying speed of light was then introduced in these dynamical equations in order determine how specific component densities dilute in an expanding universe.
-        <br><br>
-        Our results showed that a varying speed of light breaks the law of conservation of energy. Consequently, a positive correlation was found between the rate at which the speed of light decreases over time and the rate at which matter, radiation and dark energy densities dilute as the Universe expands. Additionally, dark energy density was found to be non-constant and it was observed that the introduction of a varying speed of light has no influence on the cutoff points of domination epochs. These results were acquired, assuming a single-component universe and as such, a multi-component model is needed in further research to more accurately describe density changes near domination epoch transitions.
-      </div>
-    </section>
 
-    <section>
+      <div class="abstract-box">
+        This paper analyzes how the introduction of a time-varying speed of light effects the evolution of matter-energy component densities in specific component domination epochs. To answer this question, the Friedmann equations and continuity equation for a generic varying speed of light were analytically derived. A specific time-varying speed of light was then introduced in these dynamical equations in order to determine how specific component densities dilute in an expanding universe.
+        <br><br>
+        Our results showed that a varying speed of light breaks the law of conservation of energy. Consequently, a positive correlation was found between the rate at which the speed of light decreases over time and the rate at which matter, radiation and dark energy densities dilute as the Universe expands. Additionally, dark energy density was found to be non-constant and it was observed that the introduction of a varying speed of light has no influence on the cutoff points of domination epochs.
+      </div>
+
       <h2>Figures</h2>
 
-      <div class="figure-item figure-full">
+      <figure class="article-figure">
         <img src="assets/bsc-fig2.png" alt="Figure 2: Matter-energy component densities for all γ values">
-        <p class="figure-caption"><strong>Figure 2.</strong> Summary of evolution with increasing scale factor of matter-energy component densities for all γ values. Component densities are shown in their respective domination epochs, overlaid for each γ value to illustrate how the rate of density dilution changes with varying speed of light.</p>
-      </div>
+        <figcaption><strong>Figure 2.</strong> Summary of evolution with increasing scale factor of matter-energy component densities for all γ values. Component densities are shown in their respective domination epochs, overlaid for each γ value to illustrate how the rate of density dilution changes with varying speed of light.</figcaption>
+      </figure>
 
-      <div class="figure-item figure-full">
+      <figure class="article-figure">
         <img src="assets/bsc-fig3.png" alt="Figure 3: Relative matter-energy component abundances">
-        <p class="figure-caption"><strong>Figure 3.</strong> Relative matter-energy component abundances as a function of the scale factor. The dotted line marks the radiation–matter transition and the dash-dotted line marks the matter–dark energy transition. Crucially, these domination epoch cutoffs are identical for all γ values, including the standard Λ-CDM case.</p>
+        <figcaption><strong>Figure 3.</strong> Relative matter-energy component abundances as a function of the scale factor. The dotted line marks the radiation–matter transition and the dash-dotted line marks the matter–dark energy transition. Crucially, these domination epoch cutoffs are identical for all γ values, including the standard Λ-CDM case.</figcaption>
+      </figure>
+
+    </div>
+
+  </main>
+
+  <!-- Floating theme toggle -->
+  <div class="theme-float">
+    <div class="theme-picker">
+      <button class="theme-toggle" aria-label="Theme">
+        <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </button>
+      <div class="theme-dropdown">
+        <button data-for="light" onclick="setTheme('light')">Light</button>
+        <button data-for="dark" onclick="setTheme('dark')">Dark</button>
+        <button data-for="neon" onclick="setTheme('neon')">Neon</button>
       </div>
-
-    </section>
-
-    <footer>
-      <p>© 2025 Louis Arts</p>
-    </footer>
-
+    </div>
   </div>
+
   <script src="theme.js"></script>
 </body>
 </html>

@@ -6,137 +6,93 @@
   <title>MSc Thesis · Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
-  <style>
-    .thesis-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.5rem;
-      margin: 0.75rem 0 1rem;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-    .abstract-block {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      padding: 1.1rem 1.25rem;
-      font-size: 0.875rem;
-      line-height: 1.75;
-      color: var(--text);
-    }
-    .figures-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-top: 0.5rem;
-    }
-    .figure-item img {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      display: block;
-    }
-    .figure-caption {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-      line-height: 1.5;
-    }
-    .figure-caption strong {
-      font-weight: 500;
-      color: var(--text);
-    }
-    .figure-full {
-      margin-bottom: 1.25rem;
-    }
-    .figures-grid + .figures-grid {
-      margin-top: 1.25rem;
-    }
-    @media (max-width: 540px) {
-      .figures-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
 
-    <nav class="back-nav">
-      <a href="index.html">← Louis Arts</a>
-      <div class="theme-picker">
-        <button class="theme-toggle" aria-label="Theme">
-          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </button>
-        <div class="theme-dropdown">
-          <button data-for="light" onclick="setTheme('light')">Light</button>
-          <button data-for="dark" onclick="setTheme('dark')">Dark</button>
-          <button data-for="neon" onclick="setTheme('neon')">Neon</button>
-        </div>
-      </div>
-    </nav>
+  <nav class="subpage-nav">
+    <div class="subpage-nav-inner">
+      <a href="index.html" class="back-link">← Louis Arts</a>
+    </div>
+  </nav>
 
-    <header>
-      <h1>Evaluating the Predictive Capacity of FLARES Simulations for High Redshift 'Little Red Dots'</h1>
-      <div class="thesis-meta">
-        <span>MSc Thesis · Imperial College London</span>
-        <span>2022 – 2023</span>
-        <span>Astrophysics of Galaxies</span>
-        <span>32 pages · 11 figures</span>
-      </div>
-      <nav class="links">
-        <a href="https://arxiv.org/abs/2412.05946" target="_blank">arXiv:2412.05946 →</a>
-      </nav>
-    </header>
+  <main class="article-wrap">
 
-    <section>
+    <p class="article-category">MSc Thesis · Imperial College London · 2022–2023</p>
+    <h1 class="article-title">Evaluating the Predictive Capacity of FLARES Simulations for High Redshift 'Little Red Dots'</h1>
+    <p class="article-meta">Astrophysics of Galaxies · 32 pages · 11 figures · arXiv:2412.05946</p>
+
+    <div class="article-tags">
+      <span class="tag">Astrophysics</span>
+      <span class="tag">Galaxy Simulations</span>
+      <span class="tag">JWST</span>
+      <span class="tag">FLARES</span>
+      <span class="tag">Cosmology</span>
+    </div>
+
+    <div class="article-links">
+      <a href="https://arxiv.org/abs/2412.05946" target="_blank">arXiv:2412.05946 ↗</a>
+    </div>
+
+    <div class="article-body">
+
       <h2>Abstract</h2>
-      <div class="abstract-block">
-        The recent discovery of "little red dots" (LRDs) — a population of extremely compact and highly dust-reddened high-redshift galaxies — by the James Webb Space Telescope presents a new challenge to the fields of astrophysics and cosmology. Their remarkably high luminosities at redshifts 5&nbsp;&lt;&nbsp;z&nbsp;&lt;&nbsp;10 appear to challenge ΛCDM cosmology and galaxy formation models, as they imply stellar masses and star formation rates that exceed the upper limits set by these models. LRDs are currently subjects of debate as the mechanisms behind their high luminosities are not yet fully understood. LRD energy outputs are thought to be either dominated by star formation (starburst galaxies) or their energy output results from the hosting of active galactic nuclei (AGN).
-        <br><br>
-        We investigate the starburst hypothesis by attempting to replicate the stellar properties of LRDs using output data from the FLARES (First Light And Reionization Epoch Simulations) simulation suite. Comparative analysis of galactic properties such as galactic number density, stellar mass and star formation rate yield significant tension between simulated and observed galaxies. The FLARES simulation overestimates the number densities of galaxies with stellar masses similar to observed LRDs by several orders of magnitude. Additionally, the simulation shows an overestimation of star formation rates. These tensions suggest a potential underestimation by the FLARES model of stellar feedback mechanisms such as active galactic nuclei feedback. These results suggest that the starburst hypothesis may be insufficient to explain the observed properties of these galaxies. Instead, the AGN scenario should be further investigated by repeating the methods in this study with a hydrodynamic galaxy simulation suite that models a higher influence of AGN feedback mechanisms on stellar activity in high-redshift galaxies.
-      </div>
-    </section>
 
-    <section>
+      <div class="abstract-box">
+        The recent discovery of "little red dots" (LRDs) — a population of extremely compact and highly dust-reddened high-redshift galaxies — by the James Webb Space Telescope presents a new challenge to astrophysics and cosmology. Their remarkably high luminosities at redshifts 5&nbsp;&lt;&nbsp;z&nbsp;&lt;&nbsp;10 appear to challenge ΛCDM cosmology and galaxy formation models, as they imply stellar masses and star formation rates that exceed the upper limits set by these models.
+        <br><br>
+        We investigate the starburst hypothesis by attempting to replicate the stellar properties of LRDs using output data from the FLARES simulation suite. Comparative analysis yields significant tension: FLARES overestimates number densities of galaxies with stellar masses similar to observed LRDs by several orders of magnitude, and shows an overestimation of star formation rates. These tensions suggest a potential underestimation of stellar feedback mechanisms such as AGN feedback, and that the AGN scenario should be further investigated.
+      </div>
+
       <h2>Figures</h2>
 
-      <div class="figure-item figure-full">
+      <figure class="article-figure">
         <img src="assets/thesis-fig1.png" alt="Figure 1: False colour stamps of little red dots">
-        <p class="figure-caption"><strong>Figure 1.</strong> False colour stamps of 20 little red dots at z = 4.2–5.5 identified by Matthee et al. (2024) using NIRCam imaging of the EIGER and FRESCO surveys. LRDs stand out as red point sources.</p>
-      </div>
+        <figcaption><strong>Figure 1.</strong> False colour stamps of 20 little red dots at z = 4.2–5.5 identified by Matthee et al. (2024) using NIRCam imaging of the EIGER and FRESCO surveys. LRDs stand out as red point sources.</figcaption>
+      </figure>
 
-      <div class="figures-grid">
-        <div class="figure-item">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:2rem 0;">
+        <figure class="article-figure" style="margin:0;">
           <img src="assets/thesis-fig5.png" alt="Figure 5: COSMOS-Web observed galaxy properties">
-          <p class="figure-caption"><strong>Figure 5.</strong> Distributions and correlations of galaxy properties from the COSMOS-Web survey: redshift, stellar mass, and star formation rate, with contour maps showing pairwise relationships.</p>
-        </div>
-        <div class="figure-item">
+          <figcaption><strong>Figure 5.</strong> Distributions and correlations of galaxy properties from the COSMOS-Web survey: redshift, stellar mass, and star formation rate, with contour maps showing pairwise relationships.</figcaption>
+        </figure>
+        <figure class="article-figure" style="margin:0;">
           <img src="assets/thesis-fig6.png" alt="Figure 6: FLARES simulated galaxy properties">
-          <p class="figure-caption"><strong>Figure 6.</strong> Same as Figure 5 for FLARES simulated galaxies, enabling direct comparison between observed and simulated populations.</p>
-        </div>
+          <figcaption><strong>Figure 6.</strong> Same as Figure 5 for FLARES simulated galaxies, enabling direct comparison between observed and simulated populations.</figcaption>
+        </figure>
       </div>
 
-      <div class="figure-item figure-full">
+      <figure class="article-figure">
         <img src="assets/thesis-fig7.png" alt="Figure 7: Stellar mass functions">
-        <p class="figure-caption"><strong>Figure 7.</strong> Stellar mass functions at z ≈ 5, 6, and 7 comparing FLARES (solid lines) with COSMOS-Web observations (dashed). Shaded regions indicate stellar masses implausible under ΛCDM cosmology.</p>
-      </div>
+        <figcaption><strong>Figure 7.</strong> Stellar mass functions at z ≈ 5, 6, and 7 comparing FLARES (solid lines) with COSMOS-Web observations (dashed). Shaded regions indicate stellar masses implausible under ΛCDM cosmology.</figcaption>
+      </figure>
 
-      <div class="figure-item figure-full">
+      <figure class="article-figure">
         <img src="assets/thesis-fig8.png" alt="Figure 8: Stellar mass vs redshift">
-        <p class="figure-caption"><strong>Figure 8.</strong> Stellar mass as a function of redshift for COSMOS-Web observations (yellow) and FLARES simulations (green). Median values are indicated by dashed lines.</p>
+        <figcaption><strong>Figure 8.</strong> Stellar mass as a function of redshift for COSMOS-Web observations (yellow) and FLARES simulations (green). Median values are indicated by dashed lines.</figcaption>
+      </figure>
+
+    </div>
+
+  </main>
+
+  <!-- Floating theme toggle -->
+  <div class="theme-float">
+    <div class="theme-picker">
+      <button class="theme-toggle" aria-label="Theme">
+        <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </button>
+      <div class="theme-dropdown">
+        <button data-for="light" onclick="setTheme('light')">Light</button>
+        <button data-for="dark" onclick="setTheme('dark')">Dark</button>
+        <button data-for="neon" onclick="setTheme('neon')">Neon</button>
       </div>
-
-    </section>
-
-    <footer>
-      <p>© 2025 Louis Arts</p>
-    </footer>
-
+    </div>
   </div>
+
   <script src="theme.js"></script>
 </body>
 </html>

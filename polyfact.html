@@ -6,52 +6,81 @@
   <title>Cross-Lingual Factual Recall · Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
 </head>
 <body>
-  <div class="container">
 
-    <nav class="back-nav">
-      <a href="index.html">← Louis Arts</a>
-      <div class="theme-picker">
-        <button class="theme-toggle" aria-label="Theme">
-          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </button>
-        <div class="theme-dropdown">
-          <button data-for="light" onclick="setTheme('light')">Light</button>
-          <button data-for="dark" onclick="setTheme('dark')">Dark</button>
-          <button data-for="neon" onclick="setTheme('neon')">Neon</button>
-        </div>
+  <nav class="subpage-nav">
+    <div class="subpage-nav-inner">
+      <a href="index.html" class="back-link">← Louis Arts</a>
+    </div>
+  </nav>
+
+  <main class="article-wrap">
+
+    <p class="article-category">Research · 2025</p>
+    <h1 class="article-title">Cross-Lingual Factual Recall via Reinforcement Learning</h1>
+    <p class="article-meta">with Jonathan von Rad, George Burgess et al. · EMNLP 2026 (under review)</p>
+
+    <div class="article-tags">
+      <span class="tag">NLP</span>
+      <span class="tag">Mechanistic Interpretability</span>
+      <span class="tag">LLMs</span>
+      <span class="tag">GRPO</span>
+      <span class="tag">Python</span>
+    </div>
+
+    <div class="article-links">
+      <a href="https://arxiv.org/abs/2606.06586" target="_blank">arXiv ↗</a>
+      <a href="https://github.com/jvonrad/Lost-in-Mistranslation/tree/main" target="_blank">GitHub ↗</a>
+    </div>
+
+    <div class="article-body">
+
+      <p>
+        Large language models are trained predominantly on English text, and as a result they often know a fact in English but fail to express it correctly in other languages. This project investigates that inconsistency systematically. We built <strong>PolyFact</strong>, a dataset of 100K Wikidata-grounded facts across 12 typologically diverse languages, and used it to benchmark three post-training approaches on two 7B-parameter models: continual pretraining, supervised fine-tuning, and reinforcement learning via GRPO.
+      </p>
+
+      <p>
+        Reinforcement learning consistently outperformed the alternatives, improving factual consistency not only on trained languages but also generalising to held-out ones — suggesting the model learns shared internal representations rather than surface-level memorisation.
+      </p>
+
+      <figure class="article-figure">
+        <img src="assets/polyfact-fig1.png" alt="PolyFact cross-lingual factual recall benchmark results">
+        <figcaption>Cross-lingual factual recall accuracy across 12 languages, comparing baseline, SFT, CPT, and GRPO post-training strategies. GRPO achieves the strongest generalisation to unseen languages.</figcaption>
+      </figure>
+
+      <h2>My Contribution: Mechanistic Interpretability</h2>
+
+      <p>
+        My contribution was the mechanistic interpretability analysis. Using LAPE (Language-specific neuron Analysis using Probing Entropy), a probing-based technique that scores neuron specialisation via Shannon entropy over activation distributions, I identified which neurons in the MLP layers were acting as language-specific routing components.
+      </p>
+
+      <p>
+        The key finding was that GRPO training substantially reduces this language specialisation: neurons that previously activated selectively for particular languages become more general-purpose, and language processing shifts toward deeper layers of the network. This reorganisation of internal representations is what enables the model to retrieve the same underlying fact regardless of the query language — offering a mechanistic explanation for the observed cross-lingual consistency gains.
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- Floating theme toggle -->
+  <div class="theme-float">
+    <div class="theme-picker">
+      <button class="theme-toggle" aria-label="Theme">
+        <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </button>
+      <div class="theme-dropdown">
+        <button data-for="light" onclick="setTheme('light')">Light</button>
+        <button data-for="dark" onclick="setTheme('dark')">Dark</button>
+        <button data-for="neon" onclick="setTheme('neon')">Neon</button>
       </div>
-    </nav>
-
-    <header>
-      <h1>Cross-Lingual Factual Recall via Reinforcement Learning</h1>
-      <p class="tagline">Research · 2025 · with Jonathan von Rad, George Burgess et al.</p>
-      <nav class="links">
-        <a href="https://arxiv.org/abs/2606.06586" target="_blank">arXiv</a>
-        <a href="https://github.com/jvonrad/Lost-in-Mistranslation/tree/main" target="_blank">GitHub</a>
-      </nav>
-      <span class="tags" style="margin-top:0.75rem;display:inline-block;">Python · Mechanistic Interpretability · LLMs · NLP · GRPO</span>
-    </header>
-
-    <section>
-      <p>
-        Large language models are trained predominantly on English text, and as a result they often know a fact in English but fail to express it correctly in other languages. This project investigates that inconsistency systematically. We built PolyFact, a dataset of 100K Wikidata-grounded facts across 12 typologically diverse languages, and used it to benchmark three post-training approaches on two 7B-parameter models: continual pretraining, supervised fine-tuning, and reinforcement learning via GRPO. Reinforcement learning consistently outperformed the alternatives, improving factual consistency not only on trained languages but also generalising to held-out ones, suggesting it learns shared internal representations rather than surface-level memorisation of training labels.
-      </p>
-      <p>
-        My contribution was the mechanistic interpretability analysis. Using LAPE (Language-specific neuron Analysis using Probing Entropy), a probing-based technique that scores neuron specialisation via Shannon entropy over activation distributions, I identified which neurons in the MLP layers of the model were acting as language-specific routing components. The key finding was that GRPO training substantially reduces this language specialisation: neurons that previously activated selectively for particular languages become more general-purpose, and language processing shifts toward deeper layers of the network. This reorganisation of internal representations is what enables the model to retrieve the same underlying fact regardless of the query language, offering a mechanistic explanation for the observed cross-lingual consistency gains.
-      </p>
-    </section>
-
-    <footer>
-      <p>© 2025 Louis Arts</p>
-    </footer>
-
+    </div>
   </div>
+
   <script src="theme.js"></script>
 </body>
 </html>

@@ -6,51 +6,83 @@
   <title>Facial Emotion Recognition · Louis Arts</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
 </head>
 <body>
-  <div class="container">
 
-    <nav class="back-nav">
-      <a href="index.html">← Louis Arts</a>
-      <div class="theme-picker">
-        <button class="theme-toggle" aria-label="Theme">
-          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </button>
-        <div class="theme-dropdown">
-          <button data-for="light" onclick="setTheme('light')">Light</button>
-          <button data-for="dark" onclick="setTheme('dark')">Dark</button>
-          <button data-for="neon" onclick="setTheme('neon')">Neon</button>
-        </div>
+  <nav class="subpage-nav">
+    <div class="subpage-nav-inner">
+      <a href="index.html" class="back-link">← Louis Arts</a>
+    </div>
+  </nav>
+
+  <main class="article-wrap">
+
+    <p class="article-category">Project · Le Wagon, Zurich · Nov – Dec 2022</p>
+    <h1 class="article-title">Real-Time Facial Emotion Recognition</h1>
+    <p class="article-meta">Team project · Presented at Le Wagon Demo Day, Zurich 2022</p>
+
+    <div class="article-tags">
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">Transfer Learning</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">DenseNet169</span>
+      <span class="tag">Flask</span>
+    </div>
+
+    <div class="article-links">
+      <a href="https://github.com/louisarts/AIdentify_repo" target="_blank">GitHub ↗</a>
+    </div>
+
+    <div class="article-body">
+
+      <p>
+        This was my first ever machine learning project, and the one that got me genuinely hooked on AI. Built during Le Wagon — an intensive data science bootcamp I did in Zurich in late 2022 — it was a team project over the final two weeks of the programme: <strong>AIdentify</strong>, a real-time facial emotion recognition system built from scratch in under two weeks with a team of three.
+      </p>
+
+      <p>
+        The system detects faces in live webcam video and classifies the expressed emotion across eight categories: neutral, happy, sad, surprised, fearful, angry, disgust, and contempt.
+      </p>
+
+      <figure class="article-figure">
+        <img src="assets/face-emotion.png" alt="Facial emotion recognition model">
+        <figcaption>DenseNet169 transfer learning pipeline with OpenCV face detection, trained on a combined FER+ / AffectNet-HQ dataset.</figcaption>
+      </figure>
+
+      <h2>Model and Data</h2>
+
+      <p>
+        We trained on a combined, deduplicated dataset of approximately 40,000 labelled images (FER+ and AffectNet-HQ), applying data augmentation and class weighting to handle label imbalance across categories. A custom CNN baseline reached 71% validation accuracy. Fine-tuning a pretrained <strong>DenseNet169</strong> via transfer learning — with frozen convolutional weights and a retrained classifier head — pushed that to <strong>81%</strong>.
+      </p>
+
+      <h2>System</h2>
+
+      <p>
+        The inference pipeline runs OpenCV face detection into a FastAPI prediction endpoint, streamed live through a Flask web application. We presented at Le Wagon Demo Day in Zurich in December 2022, and it's still the project I point to as the moment I realised I wanted to keep building things like this.
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- Floating theme toggle -->
+  <div class="theme-float">
+    <div class="theme-picker">
+      <button class="theme-toggle" aria-label="Theme">
+        <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </button>
+      <div class="theme-dropdown">
+        <button data-for="light" onclick="setTheme('light')">Light</button>
+        <button data-for="dark" onclick="setTheme('dark')">Dark</button>
+        <button data-for="neon" onclick="setTheme('neon')">Neon</button>
       </div>
-    </nav>
-
-    <header>
-      <h1>Real-Time Facial Emotion Recognition</h1>
-      <p class="tagline">Le Wagon Bootcamp Project · Nov – Dec 2022</p>
-      <nav class="links">
-        <a href="https://github.com/louisarts/AIdentify_repo" target="_blank">GitHub</a>
-      </nav>
-      <span class="tags" style="margin-top:0.75rem;display:inline-block;">Python · TensorFlow · Transfer Learning · OpenCV · Flask</span>
-    </header>
-
-    <section>
-      <p>
-        This was my first ever machine learning project, and the one that got me genuinely hooked on AI. It was built during Le Wagon, an intensive data science bootcamp I did in Zurich in late 2022. Le Wagon covers the full stack of practical data science over ten weeks, from Python and SQL through to machine learning, deep learning, and deployment. The final two weeks are dedicated to a team project, and this was ours: AIdentify, a real-time facial emotion recognition system built from scratch in under two weeks with a team of three.
-      </p>
-      <p>
-        The system detects faces in live webcam video and classifies the expressed emotion across eight categories: neutral, happy, sad, surprised, fearful, angry, disgust, and contempt. We trained on a combined, deduplicated dataset of approximately 40,000 labelled images (FER+ and AffectNet-HQ), applying data augmentation and class weighting to handle label imbalance across categories. A custom CNN baseline reached 71% validation accuracy; fine-tuning a pretrained DenseNet169 via transfer learning, with frozen convolutional weights and a retrained classifier head, pushed that to 81%. The inference pipeline runs OpenCV face detection into a FastAPI prediction endpoint, streamed live through a Flask web app. We presented it at Le Wagon Demo Day in Zurich in December 2022, and it's still the project I point to as the moment I realised I wanted to keep building things like this.
-      </p>
-    </section>
-
-    <footer>
-      <p>© 2025 Louis Arts</p>
-    </footer>
-
+    </div>
   </div>
+
   <script src="theme.js"></script>
 </body>
 </html>
