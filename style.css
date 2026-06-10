@@ -62,6 +62,8 @@ header {
   display: flex;
   align-items: center;
   gap: 1.1rem;
+  margin-left: calc(-126px - 1.1rem);
+  width: calc(100% + 126px + 1.1rem);
 }
 
 .profile-photo {
@@ -188,6 +190,8 @@ section a:hover { text-decoration: underline; }
   gap: 1.25rem;
   font-size: 0.875rem;
   align-items: baseline;
+  margin-left: calc(-68px - 1.25rem);
+  width: calc(100% + 68px + 1.25rem);
 }
 
 .date {
@@ -349,6 +353,8 @@ section a:hover { text-decoration: underline; }
   display: flex;
   gap: 1.2rem;
   align-items: flex-start;
+  margin-left: calc(-60px - 1.2rem);
+  width: calc(100% + 60px + 1.2rem);
 }
 
 .edu-logo-col {
@@ -922,11 +928,11 @@ footer {
 @media (max-width: 540px) {
   .container { padding: 2rem 1.5rem 3rem; }
   h1 { font-size: 1.5rem; }
-  .header-main { gap: 0.85rem; }
+  .header-main { gap: 0.85rem; margin-left: 0; width: 100%; }
   .profile-photo { width: 88px; height: 88px; }
-  .news-list li { flex-direction: column; gap: 0.1rem; }
+  .news-list li { flex-direction: column; gap: 0.1rem; margin-left: 0; width: 100%; }
   .project { flex-direction: column; margin-left: 0; width: 100%; }
-  .edu-list li { flex-direction: column; gap: 0.3rem; }
+  .edu-list li { flex-direction: column; gap: 0.3rem; margin-left: 0; width: 100%; }
   .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
   .site-nav-links { display: none; }
