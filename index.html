@@ -14,29 +14,18 @@
   <nav id="site-nav">
     <div class="site-nav-inner">
       <a href="#" class="site-nav-name">Louis Arts</a>
-      <div class="site-nav-links">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-
-    <!-- Header -->
-    <header>
-      <div class="header-main">
-      <img src="assets/louisface.png" alt="Louis Arts" class="profile-photo" width="126" height="126">
-      <div class="header-content">
-      <div class="header-name-row">
-        <h1>Louis Arts</h1>
+      <div class="site-nav-right">
+        <div class="site-nav-links">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+        </div>
         <div class="theme-picker">
           <button class="theme-toggle" aria-label="Theme">
-            <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-            <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </button>
           <div class="theme-dropdown">
             <button data-for="light" onclick="setTheme('light')">Light</button>
@@ -45,27 +34,34 @@
           </div>
         </div>
       </div>
-      <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
-      <p class="availability"><span class="avail-dot"></span>Open to DS/ML roles · London · from Sep 2026</p>
-      <nav class="links">
-        <a href="Curriculum_Vitae.pdf" target="_blank" class="cv-link">CV</a>
-        <a href="mailto:artslouis@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/louisarts" target="_blank">GitHub</a>
-      </nav>
-      </div><!-- /header-content -->
-      </div><!-- /header-main -->
-    </header>
+    </div>
+  </nav>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP. I'm interested in building models that generalise well beyond their training distribution and systems that are both technically rigorous and practically useful.
-      </p>
-      <p>
-        Previously, I interned at LemonAI in London, where I researched linguistic noise patterns in transcription data and built hybrid NLP data augmentation pipelines using the Claude API. I'm fluent in Dutch, French, and English, and I'm based in London.
-      </p>
+  <div class="container">
+
+    <!-- Intro / About -->
+    <section id="about" class="intro">
+      <div class="intro-sidebar">
+        <img src="assets/louisface.png" alt="Louis Arts" class="profile-photo" width="180" height="180">
+        <h1>Louis Arts</h1>
+        <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
+        <p class="availability"><span class="avail-dot"></span>Open to DS/ML roles · London · from Sep 2026</p>
+        <nav class="links">
+          <a href="Curriculum_Vitae.pdf" target="_blank" class="cv-link">CV</a>
+          <a href="mailto:artslouis@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/louis-arts-a768221a6/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/louisarts" target="_blank">GitHub</a>
+        </nav>
+      </div>
+      <div class="intro-bio">
+        <h2>About</h2>
+        <p>
+          I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP. I'm interested in building models that generalise well beyond their training distribution and systems that are both technically rigorous and practically useful.
+        </p>
+        <p>
+          Previously, I interned at LemonAI in London, where I researched linguistic noise patterns in transcription data and built hybrid NLP data augmentation pipelines using the Claude API. I'm fluent in Dutch, French, and English, and I'm based in London.
+        </p>
+      </div>
     </section>
 
     <!-- News -->
@@ -208,14 +204,8 @@
   <script src="theme.js"></script>
   <script>
     (function () {
-      var nav = document.getElementById('site-nav');
-      var header = document.querySelector('header');
       var sections = document.querySelectorAll('section[id]');
       var navLinks = document.querySelectorAll('.site-nav-links a');
-
-      window.addEventListener('scroll', function () {
-        nav.classList.toggle('visible', header.getBoundingClientRect().bottom < 0);
-      }, { passive: true });
 
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
