@@ -2,12 +2,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #f9f9f7;
-  --text:    #18181b;
-  --muted:   #71717a;
-  --accent:  #2563eb;
-  --border:  #e4e4e7;
-  --tag-bg:  #f4f4f5;
+  --bg:      #fafaf8;
+  --text:    #1b1b1f;
+  --muted:   #74747d;
+  --accent:  #2f5fd6;
+  --border:  #e6e6e3;
+  --tag-bg:  #f3f3f1;
 }
 
 [data-theme="dark"] {
@@ -40,7 +40,9 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
+  letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* ── Layout ── */
@@ -66,7 +68,7 @@ header {
 .profile-photo {
   width: 168px;
   height: 168px;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -146,19 +148,19 @@ section {
 
 h2 {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 
 section p {
   color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.72;
-  margin-bottom: 0.7rem;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin-bottom: 0.8rem;
 }
 
 section p:last-child { margin-bottom: 0; }
@@ -206,22 +208,24 @@ section a:hover { text-decoration: underline; }
 
 .project {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.3rem;
   align-items: flex-start;
-  margin-left: calc(-110px - 1.2rem);
-  width: calc(100% + 110px + 1.2rem);
+  margin-left: calc(-110px - 1.3rem);
+  width: calc(100% + 110px + 1.3rem);
   position: relative;
-  background: var(--tag-bg);
+  background: transparent;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
   cursor: pointer;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .project:hover {
-  transform: scale(1.016);
-  box-shadow: 0 6px 28px rgba(0,0,0,0.09);
+  transform: scale(1.012);
+  background: var(--tag-bg);
+  border-color: transparent;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.07);
 }
 
 .project-thumb {
@@ -277,15 +281,16 @@ section a:hover { text-decoration: underline; }
 
 .work-badge {
   font-family: 'Inter', sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 500;
-  color: #fff;
-  background: var(--accent);
-  padding: 0.1rem 0.45rem;
-  border-radius: 20px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.08rem 0.45rem;
+  border-radius: 4px;
   vertical-align: middle;
-  margin-left: 0.35rem;
-  letter-spacing: 0.02em;
+  margin-left: 0.45rem;
+  letter-spacing: 0.06em;
 }
 
 /* ── Publications ── */
@@ -351,22 +356,24 @@ section a:hover { text-decoration: underline; }
 
 .edu-list li {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.3rem;
   align-items: flex-start;
-  margin-left: calc(-90px - 1.2rem);
-  width: calc(100% + 90px + 1.2rem);
+  margin-left: calc(-90px - 1.3rem);
+  width: calc(100% + 90px + 1.3rem);
   position: relative;
-  background: var(--tag-bg);
+  background: transparent;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
   cursor: pointer;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .edu-list li:hover {
-  transform: scale(1.016);
-  box-shadow: 0 6px 28px rgba(0,0,0,0.09);
+  transform: scale(1.012);
+  background: var(--tag-bg);
+  border-color: transparent;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.07);
 }
 
 .edu-logo-col {
@@ -887,9 +894,15 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 }
 
 /* Cards — dark */
+[data-theme="dark"] .project,
+[data-theme="dark"] .edu-list li {
+  border-color: #2e2e33;
+}
+
 [data-theme="dark"] .project:hover,
 [data-theme="dark"] .edu-list li:hover {
-  box-shadow: 0 6px 28px rgba(0,0,0,0.35);
+  border-color: transparent;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.4);
 }
 
 /* ── Sticky nav ── */
@@ -975,8 +988,8 @@ footer {
   .header-main { gap: 0.85rem; }
   .profile-photo { width: 96px; height: 96px; }
   .news-list li { flex-direction: column; gap: 0.1rem; margin-left: 0; width: 100%; }
-  .project { flex-direction: column; margin-left: 0; width: 100%; border-radius: 8px; }
-  .edu-list li { flex-direction: column; gap: 0.3rem; margin-left: 0; width: 100%; border-radius: 8px; }
+  .project { flex-direction: column; margin-left: 0; width: 100%; border-radius: 10px; }
+  .edu-list li { flex-direction: column; gap: 0.3rem; margin-left: 0; width: 100%; border-radius: 10px; }
 
   .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
