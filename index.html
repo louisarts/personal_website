@@ -21,6 +21,10 @@
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
         </div>
+        <div class="nav-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="site-search" placeholder="Search" aria-label="Search the site" autocomplete="off">
+        </div>
         <div class="theme-picker">
           <button class="theme-toggle" aria-label="Theme">
             <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -45,7 +49,6 @@
         <img src="assets/louisface.png" alt="Louis Arts" class="profile-photo" width="180" height="180">
         <h1>Louis Arts</h1>
         <p class="tagline">MSc Data Science &amp; Machine Learning · UCL</p>
-        <p class="availability"><span class="avail-dot"></span>Open to DS/ML roles · London · from Sep 2026</p>
         <nav class="links">
           <a href="Curriculum_Vitae.pdf" target="_blank" class="cv-link">CV</a>
           <a href="mailto:artslouis@gmail.com">Email</a>
@@ -56,10 +59,10 @@
       <div class="intro-bio">
         <h2>About</h2>
         <p>
-          I'm an MSc student in Data Science and Machine Learning at UCL, with a background in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP. I'm interested in building models that generalise well beyond their training distribution and systems that are both technically rigorous and practically useful.
+          I'm a Data Science and Machine Learning MSc student at UCL, building on a foundation in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP, and I'm drawn in particular to models that generalise beyond their training distribution and to systems that are as practically useful as they are technically rigorous.
         </p>
         <p>
-          Previously, I interned at LemonAI in London, where I researched linguistic noise patterns in transcription data and built hybrid NLP data augmentation pipelines using the Claude API. I'm fluent in Dutch, French, and English, and I'm based in London.
+          Most recently I interned at LemonAI in London, where I studied linguistic noise in transcription data and built hybrid NLP augmentation pipelines powered by the Claude API. I'm fluent in Dutch, French, and English, and based in London.
         </p>
       </div>
     </section>
@@ -218,6 +221,34 @@
       }, { rootMargin: '-20% 0px -70% 0px' });
 
       sections.forEach(function (s) { observer.observe(s); });
+    })();
+  </script>
+  <script>
+    (function () {
+      var search = document.getElementById('site-search');
+      if (!search) return;
+      var items = document.querySelectorAll('.news-list li, .project, .edu-list li');
+      var filterable = document.querySelectorAll('#news, #projects, #education');
+
+      function run() {
+        var q = search.value.trim().toLowerCase();
+        items.forEach(function (item) {
+          var match = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
+          item.style.display = match ? '' : 'none';
+        });
+        filterable.forEach(function (sec) {
+          var entries = sec.querySelectorAll('.news-list li, .project, .edu-list li');
+          var anyVisible = Array.prototype.some.call(entries, function (e) {
+            return e.style.display !== 'none';
+          });
+          sec.style.display = anyVisible ? '' : 'none';
+        });
+      }
+
+      search.addEventListener('input', run);
+      search.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { search.value = ''; run(); search.blur(); }
+      });
     })();
   </script>
 </body>

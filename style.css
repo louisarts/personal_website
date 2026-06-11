@@ -964,6 +964,51 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 .site-nav-links a:hover,
 .site-nav-links a.active { color: var(--accent); }
 
+/* ── Nav search ── */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0.32rem 0.6rem;
+  color: var(--muted);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav-search:focus-within {
+  border-color: var(--accent);
+  background: var(--bg);
+  color: var(--accent);
+}
+
+.nav-search svg { flex-shrink: 0; }
+
+.nav-search input {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: var(--text);
+  width: 108px;
+  padding: 0;
+  letter-spacing: inherit;
+}
+
+.nav-search input::placeholder { color: var(--muted); }
+.nav-search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+
+[data-theme="neon"] .nav-search {
+  border-color: rgba(0,255,229,0.35);
+  box-shadow: inset 0 0 8px rgba(0,255,229,0.05);
+}
+[data-theme="neon"] .nav-search:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(0,255,229,0.25), inset 0 0 8px rgba(0,255,229,0.08);
+}
+
 section[id] { scroll-margin-top: 72px; }
 
 
@@ -1012,4 +1057,6 @@ footer {
   .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
   .site-nav-links { display: none; }
+  .site-nav-right { gap: 0.7rem; }
+  .nav-search input { width: 84px; }
 }
