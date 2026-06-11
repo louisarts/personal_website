@@ -153,6 +153,29 @@ h1 {
 
 .links a:hover { color: var(--accent); }
 
+.ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--tag-bg);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text) !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.ext-link:hover {
+  border-color: var(--accent);
+  color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+}
+.ext-link svg { flex-shrink: 0; }
+
+header .links { justify-content: flex-start; }
+
 /* ── Sections ── */
 section {
   margin-bottom: 4.5rem;
