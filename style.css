@@ -63,6 +63,8 @@ header {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+  margin-left: calc(-168px - 2rem);
+  width: calc(100% + 168px + 2rem);
 }
 
 .profile-photo {
@@ -985,7 +987,7 @@ footer {
 @media (max-width: 540px) {
   .container { padding: 2rem 1.5rem 3rem; }
   h1 { font-size: 1.5rem; }
-  .header-main { gap: 0.85rem; }
+  .header-main { gap: 0.85rem; margin-left: 0; width: 100%; }
   .profile-photo { width: 96px; height: 96px; }
   .news-list li { flex-direction: column; gap: 0.1rem; margin-left: 0; width: 100%; }
   .project { flex-direction: column; margin-left: 0; width: 100%; border-radius: 10px; }
