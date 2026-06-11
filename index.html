@@ -22,8 +22,10 @@
           <a href="#education">Education</a>
         </div>
         <div class="nav-search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="site-search" placeholder="Search" aria-label="Search the site" autocomplete="off">
+          <button type="button" class="nav-search-toggle" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <input type="search" id="site-search" aria-label="Search the site" autocomplete="off">
         </div>
         <div class="theme-picker">
           <button class="theme-toggle" aria-label="Theme">
@@ -59,10 +61,13 @@
       <div class="intro-bio">
         <h2>About</h2>
         <p>
-          I'm a Data Science and Machine Learning MSc student at UCL, building on a foundation in physics and astrophysics from Imperial College London. My work sits at the intersection of machine learning, computer vision, and applied NLP, and I'm drawn in particular to models that generalise beyond their training distribution and to systems that are as practically useful as they are technically rigorous.
+          I'm a Data Science and Machine Learning MSc student at UCL, where I focus on building models that hold up outside the lab — systems that stay reliable when the data shifts beneath them. I came to machine learning from physics: I completed an MSc in Astrophysics at Imperial College London, modelling early-universe galaxies observed by the James Webb Space Telescope. That training in reasoning from messy, high-dimensional data still shapes how I approach problems today.
         </p>
         <p>
-          Most recently I interned at LemonAI in London, where I studied linguistic noise in transcription data and built hybrid NLP augmentation pipelines powered by the Claude API. I'm fluent in Dutch, French, and English, and based in London.
+          My work spans machine learning, computer vision, and applied NLP, and I'm drawn in particular to questions of generalisation and interpretability. Recently I led the mechanistic interpretability analysis for a study on cross-lingual factual recall in large language models, tracing how reinforcement learning reshapes the way facts are stored and retrieved across languages. Alongside research, I like building things end to end — a mobile eye-tracking system trained on over a million frames, and a real-time facial emotion recogniser deployed from scratch.
+        </p>
+        <p>
+          Most recently I interned at LemonAI in London, where I studied linguistic noise in transcription data and built hybrid NLP augmentation pipelines powered by the Claude API to make speech models more robust in the wild. I care about work that is technically rigorous and genuinely useful in equal measure. I'm fluent in Dutch, French, and English, and based in London.
         </p>
       </div>
     </section>
@@ -227,6 +232,8 @@
     (function () {
       var search = document.getElementById('site-search');
       if (!search) return;
+      var box = document.querySelector('.nav-search');
+      var toggle = document.querySelector('.nav-search-toggle');
       var items = document.querySelectorAll('.news-list li, .project, .edu-list li');
       var filterable = document.querySelectorAll('#news, #projects, #education');
 
@@ -245,9 +252,26 @@
         });
       }
 
+      function close() {
+        box.classList.remove('open');
+        if (search.value) { search.value = ''; run(); }
+      }
+
+      toggle.addEventListener('click', function () {
+        if (box.classList.contains('open')) {
+          close();
+        } else {
+          box.classList.add('open');
+          search.focus();
+        }
+      });
+
       search.addEventListener('input', run);
+      search.addEventListener('blur', function () {
+        if (!search.value.trim()) box.classList.remove('open');
+      });
       search.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') { search.value = ''; run(); search.blur(); }
+        if (e.key === 'Escape') { close(); search.blur(); }
       });
     })();
   </script>

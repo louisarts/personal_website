@@ -968,43 +968,63 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 .nav-search {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  background: var(--tag-bg);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 7px;
-  padding: 0.32rem 0.6rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-search.open {
+  background: var(--tag-bg);
+  border-color: var(--border);
+  padding-right: 0.5rem;
+}
+
+.nav-search.open:focus-within { border-color: var(--accent); }
+
+.nav-search-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
   color: var(--muted);
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  padding: 0.3rem;
+  line-height: 1;
+  border-radius: 6px;
+  transition: color 0.15s ease;
 }
 
-.nav-search:focus-within {
-  border-color: var(--accent);
-  background: var(--bg);
-  color: var(--accent);
-}
-
-.nav-search svg { flex-shrink: 0; }
+.nav-search-toggle:hover { color: var(--text); }
+.nav-search.open .nav-search-toggle { color: var(--accent); }
 
 .nav-search input {
+  width: 0;
+  opacity: 0;
   border: none;
   background: none;
   outline: none;
   font-family: inherit;
   font-size: 0.82rem;
   color: var(--text);
-  width: 108px;
   padding: 0;
   letter-spacing: inherit;
+  transition: width 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
 }
 
-.nav-search input::placeholder { color: var(--muted); }
+.nav-search.open input {
+  width: 132px;
+  opacity: 1;
+  margin-left: 0.2rem;
+}
+
 .nav-search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
 
-[data-theme="neon"] .nav-search {
+[data-theme="neon"] .nav-search.open {
   border-color: rgba(0,255,229,0.35);
   box-shadow: inset 0 0 8px rgba(0,255,229,0.05);
 }
-[data-theme="neon"] .nav-search:focus-within {
+[data-theme="neon"] .nav-search.open:focus-within {
   border-color: var(--accent);
   box-shadow: 0 0 12px rgba(0,255,229,0.25), inset 0 0 8px rgba(0,255,229,0.08);
 }
@@ -1057,6 +1077,6 @@ footer {
   .edu-logo-col { min-height: unset; justify-content: flex-start; }
   .edu-row { flex-direction: column; gap: 0.1rem; }
   .site-nav-links { display: none; }
-  .site-nav-right { gap: 0.7rem; }
-  .nav-search input { width: 84px; }
+  .site-nav-right { gap: 0.6rem; }
+  .nav-search.open input { width: 100px; }
 }
