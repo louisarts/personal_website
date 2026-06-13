@@ -688,11 +688,15 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 .lessons-list li { padding-left: 0.2rem; }
 
 /* ── arXiv-style left margin stamp ── */
+.main-content {
+  position: relative;
+}
+
 .arxiv-stamp-wrapper {
-  position: fixed;
-  left: 10px;
+  position: absolute;
+  left: -3.5rem;
   top: 0;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   pointer-events: none;
