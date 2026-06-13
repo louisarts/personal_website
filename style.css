@@ -486,8 +486,9 @@ section a:hover { text-decoration: underline; }
 }
 
 .edu-detail {
+  font-family: 'Courier New', Courier, monospace;
   color: var(--muted);
-  font-size: 0.79rem;
+  font-size: 0.75rem;
   line-height: 1.55;
   margin-top: 0.2rem;
   margin-bottom: 0 !important;
