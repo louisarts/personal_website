@@ -700,14 +700,14 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 }
 
 .arxiv-stamp {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.6rem;
-  color: var(--muted);
-  opacity: 0.55;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #888;
   white-space: nowrap;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   user-select: none;
 }
 
