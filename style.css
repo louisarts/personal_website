@@ -687,6 +687,34 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
 
 .lessons-list li { padding-left: 0.2rem; }
 
+/* ── arXiv-style left margin stamp ── */
+.arxiv-stamp-wrapper {
+  position: fixed;
+  left: 10px;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.arxiv-stamp {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.6rem;
+  color: var(--muted);
+  opacity: 0.55;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.12em;
+  user-select: none;
+}
+
+@media (max-width: 1060px) {
+  .arxiv-stamp-wrapper { display: none; }
+}
+
 /* ── Dark mode overrides ── */
 [data-theme="dark"] .abstract-block { background: var(--tag-bg); }
 
