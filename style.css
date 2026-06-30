@@ -729,6 +729,15 @@ html[data-theme="neon"] .theme-dropdown [data-for="neon"] {
   .arxiv-stamp-wrapper { display: none; }
 }
 
+[data-theme="neon"] .arxiv-stamp {
+  color: var(--accent);
+  text-shadow:
+    0 0 6px #fff,
+    0 0 14px var(--accent),
+    0 0 40px var(--accent),
+    0 0 80px rgba(0,255,229,0.4);
+}
+
 /* ── Dark mode overrides ── */
 [data-theme="dark"] .abstract-block { background: var(--tag-bg); }
 
