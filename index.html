@@ -19,6 +19,7 @@
           <a href="#about">About</a>
           <a href="#news">News</a>
           <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
           <a href="#education">Education</a>
         </div>
         <div class="nav-search">
@@ -149,6 +150,42 @@
 
     </div><!-- /main-content -->
 
+    <!-- Work Experience -->
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <ul class="edu-list work-list">
+
+        <li>
+          <div class="edu-logo-col">
+            <img src="assets/logos/chattermill.svg" alt="Chattermill" class="edu-logo logo-chattermill">
+          </div>
+          <div class="edu-content">
+            <div class="edu-row">
+              <strong class="edu-title-text">Research Intern</strong>
+              <span class="date">Jun 2026 – Present</span>
+            </div>
+            <span class="institution">Chattermill · London, Hybrid</span>
+            <p class="edu-detail">Research on LLM-in-the-loop text clustering algorithms for customer feedback analysis.</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="edu-logo-col">
+            <img src="assets/lemonai.png" alt="Lemon AI" class="edu-logo">
+          </div>
+          <div class="edu-content">
+            <div class="edu-row">
+              <strong><a href="lemon-nlp.html" class="edu-title-link">Project Intern</a></strong>
+              <span class="date">Jan – May 2025</span>
+            </div>
+            <span class="institution">Lemon AI · London, Remote</span>
+            <p class="edu-detail">Noise injection pipeline combining rule-based and LLM-driven transformations to simulate realistic linguistic noise in customer relations transcription data, enhancing model robustness and generalisation.</p>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
     <!-- Education -->
     <section id="education">
       <h2>Education</h2>
@@ -245,8 +282,8 @@
       if (!search) return;
       var box = document.querySelector('.nav-search');
       var toggle = document.querySelector('.nav-search-toggle');
-      var items = document.querySelectorAll('.news-list li, .project, .edu-list li');
-      var filterable = document.querySelectorAll('#news, #projects, #education');
+      var items = document.querySelectorAll('.news-list li, .project, .edu-list li, .work-list li');
+      var filterable = document.querySelectorAll('#news, #projects, #experience, #education');
 
       function run() {
         var q = search.value.trim().toLowerCase();

@@ -428,6 +428,9 @@ section a:hover { text-decoration: underline; }
 [data-theme="dark"] .logo-lewagon,
 [data-theme="neon"] .logo-lewagon { filter: brightness(0) invert(1); }
 
+[data-theme="dark"] .logo-chattermill,
+[data-theme="neon"] .logo-chattermill { filter: brightness(0) invert(1); }
+
 .edu-logo {
   max-height: 60px;
   max-width: 90px;
