@@ -431,21 +431,23 @@ section a:hover { text-decoration: underline; }
 [data-theme="dark"] .logo-chattermill,
 [data-theme="neon"] .logo-chattermill { filter: brightness(0) invert(1); }
 
-.work-thumb-col {
-  width: 140px;
-  height: 140px;
+.work-logo-col {
+  width: 110px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 2px;
+  min-height: 36px;
 }
 
 .work-logo {
-  width: 140px;
-  height: 140px;
+  max-height: 80px;
+  max-width: 110px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 2px;
-  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .edu-logo {
