@@ -433,10 +433,19 @@ section a:hover { text-decoration: underline; }
 
 .work-thumb-col {
   width: 140px;
+  height: 140px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.work-logo {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .edu-logo {
