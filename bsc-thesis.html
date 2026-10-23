@@ -3,61 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BSc Thesis · Louis Arts</title>
+  <title>Time-Varying Speed of Light Cosmology · BSc Thesis · Louis Arts</title>
+  <meta name="description" content="BSc thesis (Maastricht University): how a time-varying speed of light alters matter-energy density evolution and domination epochs in an expanding universe.">
+  <link rel="canonical" href="https://louisarts.com/bsc-thesis.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Louis Arts">
+  <meta property="og:title" content="Time-Varying Speed of Light Cosmology · BSc Thesis">
+  <meta property="og:description" content="BSc thesis (Maastricht University): how a time-varying speed of light alters matter-energy density evolution and domination epochs in an expanding universe.">
+  <meta property="og:url" content="https://louisarts.com/bsc-thesis.html">
+  <meta property="og:image" content="https://louisarts.com/assets/louis-og.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23ffffff' stroke='%23d0d0d0' stroke-width='2'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='36' font-weight='600' text-anchor='middle' fill='%231050a0'%3ELA%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <script>(function(){var t=localStorage.getItem('site-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
-  <style>
-    .thesis-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.5rem;
-      margin: 0.75rem 0 1rem;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-    .abstract-block {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      padding: 1.1rem 1.25rem;
-      font-size: 0.875rem;
-      line-height: 1.75;
-      color: var(--text);
-    }
-    .figure-item img {
-      width: 100%;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      display: block;
-    }
-    .figure-caption {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-      line-height: 1.5;
-    }
-    .figure-caption strong {
-      font-weight: 500;
-      color: var(--text);
-    }
-    .figure-full {
-      margin-bottom: 1.25rem;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('site-theme');if(t){document.documentElement.setAttribute('data-theme',t);var c={dark:'#18181b',neon:'#09090f'}[t];if(c)document.querySelector('meta[name="theme-color"]').setAttribute('content',c);}})()</script>
 </head>
 <body>
   <div class="container">
 
-    <nav class="back-nav">
+    <nav class="back-nav" aria-label="Back">
       <a href="index.html">← Louis Arts</a>
       <div class="theme-picker">
-        <button class="theme-toggle" aria-label="Theme">
-          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <button class="theme-toggle" aria-label="Choose theme" aria-haspopup="true" aria-expanded="false">
+          <svg class="icon-light-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-dark-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-neon-mode" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </button>
         <div class="theme-dropdown">
           <button data-for="light" onclick="setTheme('light')">Light</button>
@@ -67,6 +40,8 @@
       </div>
     </nav>
 
+    <main>
+
     <header>
       <h1>Matter-energy density evolution and spatial expansion in the context of time-varying speed of light cosmology</h1>
       <div class="thesis-meta">
@@ -75,7 +50,10 @@
         <span>Theoretical Cosmology</span>
       </div>
       <nav class="links">
-        <a href="https://www.researchgate.net/publication/365711983_Matter-energy_density_evolution_and_spatial_expansion_in_the_context_of_time-varying_speed_of_light_cosmology" target="_blank">ResearchGate →</a>
+        <a href="https://www.researchgate.net/publication/365711983_Matter-energy_density_evolution_and_spatial_expansion_in_the_context_of_time-varying_speed_of_light_cosmology" target="_blank" rel="noopener" class="ext-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          ResearchGate
+        </a>
       </nav>
     </header>
 
@@ -92,19 +70,21 @@
       <h2>Figures</h2>
 
       <div class="figure-item figure-full">
-        <img src="assets/bsc-fig2.png" alt="Figure 2: Matter-energy component densities for all γ values">
+        <img src="assets/bsc-fig2.png" alt="Figure 2: Matter-energy component densities for all γ values" width="957" height="311" loading="lazy" decoding="async">
         <p class="figure-caption"><strong>Figure 2.</strong> Summary of evolution with increasing scale factor of matter-energy component densities for all γ values. Component densities are shown in their respective domination epochs, overlaid for each γ value to illustrate how the rate of density dilution changes with varying speed of light.</p>
       </div>
 
       <div class="figure-item figure-full">
-        <img src="assets/bsc-fig3.png" alt="Figure 3: Relative matter-energy component abundances">
+        <img src="assets/bsc-fig3.png" alt="Figure 3: Relative matter-energy component abundances" width="1758" height="1177" loading="lazy" decoding="async">
         <p class="figure-caption"><strong>Figure 3.</strong> Relative matter-energy component abundances as a function of the scale factor. The dotted line marks the radiation–matter transition and the dash-dotted line marks the matter–dark energy transition. Crucially, these domination epoch cutoffs are identical for all γ values, including the standard Λ-CDM case.</p>
       </div>
 
     </section>
 
+    </main>
+
     <footer>
-      <p>© 2025 Louis Arts</p>
+      <p>© 2026 Louis Arts</p>
     </footer>
 
   </div>

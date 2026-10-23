@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://louisarts.com/sitemap.xml
